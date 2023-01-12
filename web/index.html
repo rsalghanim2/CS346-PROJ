@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Explore saudi</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+    background-color:#569f67 ;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 120px;
+}
+.logo{
+    text-decoration: none;
+    color:#1f3a24;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.navigation a{
+    color:#1f3a24;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color:rgb(40, 12, 179);
+}
+section{
+    padding: 100px 120px;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(saudi-arabia-landmark-global-travel-and-journey-vector-8788484.jpeg) no-repeat;
+    background-size:600px;
+    background-position: right center;
+    background-attachment: fixed;
+    
+}
+.main h2{
+    color: rgb(59, 109, 71);
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: 6px;
+    color: rgb(59, 109, 71);
+    font-weight: 600;
+    font-size: 3em;
+}
+.mian h3{
+    color:aqua;
+    font-size: 2em    ;
+    font-weight: 700;
+    letter-spacing:1px ;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-btn{
+    color: #fff;
+    background-color: #3a6c42;
+   text-decoration: none; 
+   font-size: 1.1em;
+   font-weight: 600;
+   display: inline-block;
+   padding: 0.9375em 1.1875em;
+   letter-spacing: 1px;
+   border-radius: 30px;
+   margin-bottom: 10px;
+   transition: 0.5s ease;
+}
+.main-btn:hover{
+    background-color: #79b782;
+    transform: scale(1.1);
+}
+.social-icons a{ 
+    font-size: 1.7em;
+    padding-right: 30px;
+    
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color:  #3a6c42;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    background-color:  #fff ;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px; 
+    transition: 0.7s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.icon{
+    color: #3a6c42 ;
+    font-size: 3em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color:  #3a6c42;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+.saudi {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(59, 109, 71);
+
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Explore Saudi</a>
+      <nav class="navigation">
+        <a href="#">Cities</a>
+        <a href="#">Event</a>
+        <a href="#">About us</a>
+      </nav>
+    </header>
+
+    <section class="main">
+      <div>
+        <h2>Welcome to <span class="saudi">Arabia</span><br /><span>Explore SAUDI</span></h2>
+        <a href="reg.html" class="main-btn">Login </a>
+        <a href="#" class="main-btn">sing up</a>
+
+        <div class="social-icons"></div>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </section>
+    <section class="cards" id="Cities">
+      <h2 class="title">Cities</h2>
+      <div class="content">
+        <div class="card">
+          <div class="icon">
+            <i class=""></i>
+          </div>
+          <div class="info">
+            <h3>Riyadh</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class=""></i>
+          </div>
+          <div class="info">
+            <h3>Alula</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class=""></i>
+          </div>
+          <div class="info">
+            <h3>Alhasa</h3>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
