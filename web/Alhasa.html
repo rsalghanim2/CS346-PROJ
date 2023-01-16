@@ -10,11 +10,241 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Explore saudi</title>
-    <style></style>
+    <title>Explore Alhasa</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      header {
+        background-color: #569f67;
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 120px;
+      }
+      .logo {
+        text-decoration: none;
+        color: #1f3a24;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.8em;
+      }
+      .navigation a {
+        color: #1f3a24;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: 500;
+        padding-left: 30px;
+      }
+      .navigation a:hover {
+        color: rgb(40, 12, 179);
+      }
+      section {
+        padding: 100px 120px;
+      }
+      .main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      
+      }
+      .main h2 {
+        color: rgb(59, 109, 71);
+        font-size: 1.4em;
+        font-weight: 500;
+      }
+      .main h2 span {
+        display: inline-block;
+        margin-top: 6px;
+        color: rgb(59, 109, 71);
+        font-weight: 600;
+        font-size: 3em;
+      }
+      .mian h3 {
+        color: aqua;
+        font-size: 2em;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+      .main-btn {
+        color: #fff;
+        background-color: #3a6c42;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: 600;
+        display: inline-block;
+        padding: 0.9375em 1.1875em;
+        letter-spacing: 1px;
+        border-radius: 30px;
+        margin-bottom: 10px;
+        transition: 0.5s ease;
+      }
+      .main-btn:hover {
+        background-color: #79b782;
+        transform: scale(1.1);
+      }
+      .social-icons a {
+        font-size: 1.7em;
+        padding-right: 30px;
+      }
+      .title {
+        display: flex;
+        justify-content: center;
+        color: #3a6c42;
+        font-size: 2.2em;
+        font-weight: 800;
+        margin-bottom: 30px;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .card {
+        background-color: #fff;
+        width: 21.25em;
+        box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+        border-radius: 10px;
+        padding: 25px;
+        margin: 15px;
+        transition: 0.7s ease;
+      }
+      .card:hover {
+        transform: scale(1.1);
+      }
+      .icon {
+        color: #3a6c42;
+        font-size: 3em;
+        text-align: center;
+      }
+      .info {
+        text-align: center;
+      }
+      .info h3 {
+        color: #3a6c42;
+        font-size: 1.2em;
+        font-weight: 700;
+        margin: 10px;
+      }
+      .saudi {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: rgb(59, 109, 71);
+      }
+      a.cards {
+        text-decoration: none;
+        color: #3a6c42;
+        font-size: 1.2em;
+        font-weight: 700;
+        margin: 10px;
+      }
+      .LearnMore {
+        width: 700px;
+        height: 300px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+        padding: 25px;
+        margin: 15px;
+        margin-left: 220px;
+        position: relative;
+        /* display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap; */
+      }
+      .lan-img {
+        width: 300px;
+        height: 250px;
+        position: relative;
+      }
+      .lan-h2 {
+        margin-left: 320px;
+        position: absolute;
+        color: #569f67;
+      }
+      .lan-p {
+        position: absolute;
+        display: block;
+        font-size: 15px;
+        margin-left: 320px;
+        margin-top: 50px;
+        /* padding: 0; */
+        /* line-height: 1.7; */
+      }
+      .currency-h2 {
+        position: absolute;
+        color: #569f67;
+        display: inline;
+      }
+      .currency-p {
+        width: 320px;
+        position: absolute;
+        display: block;
+        font-size: 15px;
+        /* margin-left: 320px; */
+        margin-top: 50px;
+      }
+      .cuurency-img {
+        width: 300px;
+        height: 250px;
+        position: relative;
+        margin-left: 360px;
+        margin-bottom: 10000px;
+        display: inline;
+      }
+      span {
+        font-weight: bold;
+      }
+      .climate-h2 {
+        margin-left: 320px;
+        position: absolute;
+        color: #569f67;
+      }
+      .climate-p {
+        position: absolute;
+        display: block;
+        font-size: 15px;
+        margin-left: 320px;
+        margin-top: 50px;
+      }
+      .climate-img {
+        width: 300px;
+        height: 250px;
+        position: relative;
+      }
+
+      @media (max-width: 1023px) {
+        header {
+          padding: 12px 20px;
+        }
+        .navigation {
+          padding-left: 10px;
+        }
+        .title {
+          font-size: 1.8em;
+        }
+        section {
+          padding: 80px 20px;
+        }
+      }
+    </style>
   </head>
   <body>
-    
+  
     <header>
       <a href="#" class="logo">Explore Alhasa</a>
       <nav class="navigation">
@@ -24,8 +254,10 @@
       </nav>
     </header>
 
-    <section class="main">
+    <section align="center"  class="main"  >
+      
       <div>
+        <img src="alhasa.jpg" alt="" width="800"  height="300"class="center">
        <p>
         The city of Al-Ahsa is one of the most important 
         Saudi cities and is located in the Eastern Province
@@ -33,11 +265,38 @@
         the name Al-Ahsa is the sound of groundwater, 
         and it is one of the largest oases in the world and the 
         largest oasis in the Kingdom of Saudi Arabia because it contains thirty water springs, where it is indicated that its natural water is suitable for irrigation, and extends from the Arabian Gulf to Oman, surrounded by palm trees on all sides and a suitable and moderate atmosphere, and we will learn in this article about the city of Al-Ahsa, its location, and the most important tourist attractions, and its economic activities, and administrative division.
-
+        
+        
+           
        </p>
+      </div>
+      </section>
+  
+
+  
+      <h1  align="center"> Events to visit</h1>
+      <section  align="center" class="container">
+        <div>
+         
+        
+            <img src="Alasfar lake.jpg" alt="" width="600"  height="500"class="center">
+            <p >
+            <a href="" class="main-btn"  >Alasfar lake</h3></a>
+            </p>
+          
+              <img src="Al Qarah Mountain‬.jpg" alt="" width="600"  height="500"class="center">
+              <p >
+                <a href="" class="main-btn"  > Al Qarah Mountai</h3></a>
+                </p>      
        
-        <img src="alhasa.jpg.jpg" width="700" height="500" alt="">
-    
+            <img src="King Abdullah Environmental Park.jpg" alt="" width="600"  height="500"class="center">
+      
+            <p >
+              <a href="" class="main-btn"  > King Abdullah Environmental Park</h3></a>
+              </p>  
+        </div>
     </section>
+     
+    
   </body>
 </html>
