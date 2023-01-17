@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title> Abha</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      *{
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+}
+
+
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(abha.jpg); background-size: cover; 
+}
+
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card{
+    width: 320px;
+  border-radius: 15px;
+  background-color: #FFF;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.card-image{
+  position: relative;
+  height: 100px;
+  width: 100%;
+  border-radius: 15%;
+
+  padding: 7px;
+}
+.card-image .card-img{
+  height: 150%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  opacity:80%;
+}
+
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #1d983e;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #265DF2;
+}
+</style>
+  </head>
+  
+  <body >
+   
+
+      <br>
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="green mountain.jpg" alt="" class="card-img">
+                            
+                           
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Green Mountain</h2>
+                        <p class="description">The Green Mountain region is one of the most important destinations 
+                            in the city of Abha. there are many different activities to do, including the following:
+                           <br> - Seeing the entire city of Abha and seeing many unique views.
+                           <br> - restaurants and cafes on top of the mountain; Which provides the visitorS an experience
+                            </p>
+                             <button class="button">View </button>
+                    </div>
+                </div>
+           <br>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        
+                        <div class="card-image">
+                            <img src="cable car.jpg" alt="" class="card-img">
+                            
+                           
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Cable Car</h2>
+                        <p class="description">TThe Abha cable car is one of the interesting experiences that tourism in Abha offers to all its visitors.
+                             The experience of riding this cable car will give you
+                              wonderful views from a height of 1600 The ride lasts for 
+                              25 to 30 minutes, and once you reach the top of the hill,
+                               you will find a number of restaurants and food stalls that offer everything from 
+                               snacks, drinks, and ice cream. 
+                           .</p>
+                             <button class="button">View </button>
+                    </div>
+                </div>
+
+                <br>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        
+                        <div class="card-image">
+                            <img src="andalus park.jpg" alt="" class="card-img">
+                            
+                           
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Andalus Park </h2>
+                        <p class="description">Andalus Park is characterized by wide green spaces, a calm atmosphere, 
+                            in addition to its distinctive location and containing a large number of restaurants, 
+                            not only this, but also includes areas designated for exercise, walking paths, 
+                            and a games area far from the public street to suit children to play safely
+                            .</p>
+                             <button class="button">View </button>
+                    </div>
+                </div>
+
+
+  </body>
+
+  </html>
