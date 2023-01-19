@@ -12,7 +12,7 @@
 
     <style>
         .begin {
-            background-image: url(alula.jfif);
+            background-image: url(alulaF.jpg);
             background-position:bottom;
             background-size: cover;
             height: 100vh;
@@ -57,6 +57,7 @@
             height: auto;
             border-radius: 20px;
             box-shadow:10px 10px 30px black;
+            opacity:0.98;
           
         }
             .about p, h1 {
@@ -95,6 +96,7 @@
                 box-shadow: 2px 2px 10px black;
                 cursor: pointer;
                 font-weight:bolder;
+              
             }
                 .col input:hover {
                     -webkit-transform: scale(1.03);
@@ -141,9 +143,20 @@
             padding: 0px 40px;
             text-align: center;
             font-size:15px;
+            position:relative;
         }
         .col:hover {
             -webkit-transform: scale(1.03);
+        }
+        .col a {
+            color: black;
+            text-decoration: none;
+            font-size:20px;
+            text-shadow: 1px 1px 0.5px black;
+        }
+        .col a:hover{
+            text-decoration:underline;
+            
         }
        
         .end {
@@ -186,11 +199,12 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Explore Saudi</a>
+        <a href="#" class="logo">ALULA</a>
         <nav class="navigation">
-            <a href="#">Cities</a>
-            <a href="#">Event</a>
-            <a href="#">About us</a>
+            <a href="#Events">Events</a>
+            <a href="#Hotels">Hotels</a>
+            <a href="#Restaurants">Restaurants </a>
+            <a href="index.html">Home</a>
         </nav>
     </header>
     <section class="begin">
@@ -202,7 +216,7 @@
     </section>
 
     <section class="about">
-        <img src="alula6.jfif" />
+        <img src="ALULaf2.jpg" />
         <div class="about-text">
             <h1><strong>About Alula</strong></h1>
             <div class="line"></div>
@@ -214,7 +228,7 @@
         </div>
     </section>
     <!--events -->
-    <section class="Events">
+    <section class="Events" id="Events">
         <h1>Events</h1>
         <div class="line"></div>
 
@@ -227,7 +241,7 @@
                     Maraya is a stunning piece of art set in the desert canyon of Ashar Valley. Designed to blend into the surrounding landscape, it rises from the sand like a mirage. The state-of-the-art structure is covered in 9,740 mirrored panels reflecting AlUla's beauty, making it the largest mirrored building in the world, according to Guinness World Records
                 </p>
                 <p> it was also designed as a fully functioning multi-purpose venue.</p>
-                <input type="button" value="Book now!"/>
+                <input type="button" value="Book now!" />
 
             </div>
             <div class="col">
@@ -254,6 +268,106 @@
                 <h5>4 MAR</h5>
                 <p>Returning in its fourth edition, the AlUla Endurance Cup will welcome more than 200 riders to compete on the desert track with the finest horses from around the world. Equestrian enthusiasts and interested spectators will have an opportunity to experience AlUla’s ancient Arabian horse heritage culture.</p>
                 <input type="button" value="Book now!" />
+            </div>
+        </div>
+    </section>
+
+    <!--hotels -->
+    <section class="Events" id="Hotels">
+        <h1>Hotels</h1>
+        <div class="line"></div>
+
+        <div class="row">
+            <div class="col">
+                <img src="CARAVAN.jpg" />
+                <h3>CARAVAN BY HABITAS</h3>
+                <p>
+                    In the spirit of wandering, Caravan by Habitas homes are made up of Airstreams and gathering spaces, echoing the lifestyle of the ancient Bedouins who once travelled the arid lands of the Arabian Peninsula in caravans.
+                </p>
+                <br />
+                <a href="https://www.google.com/maps/place/Habitas+Caravan/@26.7558574,37.8749437,17z/data=!4m5!3m4!1s0x15a5b104a0c2a657:0x70b04702112cb6ad!8m2!3d26.7558574!4d37.8771324?shorturl=1"class="location">LOCATION></a>
+                <input type="button" value="Book now!" />
+
+            </div>
+            <div class="col">
+                <img src="HABITAS ALULA.jpg" />
+                <h3>HABITAS ALULA</h3>
+                <p>The serene resort pathways lead guests up to each of the 96 guest rooms, which span three tiers: premium Celestial Rooms, Alcove Rooms and Canyon Rooms, as well as to the yoga deck, wellness and fitness centres, restaurant, and swimming pool.</p>
+                <br />
+                <a href="https://www.google.com/maps/place/%D9%85%D9%86%D8%AA%D8%AC%D8%B9+%D9%87%D8%A7%D8%A8%D9%8A%D8%AA%D8%A7%D8%B3+%D8%A7%D9%84%D8%B9%D9%84%D8%A7+%7C+Habitas+AlUla%E2%80%AD/@26.762072,37.859161,15z/data=!4m5!3m4!1s0x0:0x4aefec7260feae23!8m2!3d26.762072!4d37.859161?shorturl=1" class="location">LOCATION></a>
+                <input type="button" value="Book now!" />
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="BANYAN TREE.jpg" style="height:430px" />
+                <h3>BANYAN TREE ALULA</h3>
+                <p>Within this enchanting space, guests can enjoy breathtaking views of the Ashar Valley from the privacy of one of 47 elegant tented villas,all lavishly decorated with authentic, handcrafted Arabian-inspired details. </p>
+                <br />
+                <a class="location">LOCATION></a>
+              
+                <input type="button" value="Book now!"style="height:30px" />
+            </div>
+
+            <div class="col">
+                <img src="SAHARY.jpg" />
+                <h3>SAHARY ALULA RESORT</h3>
+                <p>There are 80 spacious rooms and suites. Each is elegantly decorated and comes with its own private bathroom and terrace.</p>
+                <br />
+                <a class="location">LOCATION></a>
+                <input type="button" value="Book now!" style="height:30px" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants -->
+
+    <section class="Events" id="Restaurants">
+        <h1>Restaurants</h1>
+        <div class="line"></div>
+
+        <div class="row">
+            <div class="col">
+                <img src="ALFA'S LOUNGE.jpg"style="height:400px" />
+                <h3>ALFA'S LOUNGE</h3>
+                <p>
+                    Tucked away in a beautiful canyon is a new hip hangout - Alfa’s Lounge. At this must-visit spot, you can enjoy a coffee or have dinner under the stars, surrounded by some of the most breathtaking scenery AlUla has to offer. Open daily from 6:00 pm – 1:00 am
+                </p>
+                <br />
+                <a href="https://www.google.com/maps/place/26%C2%B040'17.7%22N+37%C2%B056'16.9%22E/@26.6715737,37.9030057,13z/data=!4m5!3m4!1s0x0:0x4c73f3ddab76d221!8m2!3d26.6715737!4d37.9380246?hl=en-SA&shorturl=11"class="location">LOCATION></a>
+                <input type="button" value="Book now!"style="height:30px"/>
+
+            </div>
+            <div class="col">
+                <img src="MAMZEL.jpg"style="height:300px" />
+                <h3>MAMZEL</h3>
+                <p>From Marbella to the hidden canyons of AlUla, MAMZEL shares the vibrant atmosphere of Spain with all who visit this secret hideout. With an inspired international menu and live entertainment, MAMZEL is the ultimate place to visit for dinner.</p>
+                <br />
+                <a href="https://www.google.com/maps/place/26%C2%B039'45.8%22N+37%C2%B056'51.9%22E/@26.662726,37.947759,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x55e55874979f09f5!8m2!3d26.662726!4d37.947759" class="location">LOCATION></a>
+                <input type="button" value="Book now!"style="height:30px"/>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="ACME1.jpg"/>
+                <h3>ACME</h3>
+                <p>ACME’s unique burgers and delicious bites bring fun new flavours to AlUla’s Old Town. From refreshing drinks to savoury snacks, an exciting menu awaits kids and adults alike</p>
+                <br />
+                <a href="https://www.google.com/maps?q=ACME+AlUla+-+%D8%A7%D9%83%D9%85%D9%8A+%D8%A7%D9%84%D8%B9%D9%84%D8%A7,+AlUla+43562&ftid=0x15a5ab029fc42d75:0xf84f1365e372df1&hl=en-US&gl=us&entry=gps&lucs=s2se&shorturl=1"class="location">LOCATION></a>
+              
+                <input type="button" value="Book now!" />
+            </div>
+
+            <div class="col">
+                <img src="BEIT WAFA.jfif"/>
+                <h3>BEIT WAFA </h3>
+                <p>Nestled among the mountains at 26 North, a glamorous camping retreat and hidden sanctuary in AlUla, Beit Wafa features a fresh, farm-to-table menu sourced from the surrounding estate and views you have to see to believe.</p>
+                <br />
+                <a href="https://www.google.com/maps/place/Beit+Wafa/@26.6911914,37.9124588,17z/data=!3m1!4b1!4m5!3m4!1s0x15a5adbf358031ef:0x37cef30fe45ff376!8m2!3d26.6911914!4d37.9146475?shorturl=1"class="location">LOCATION></a>
+                <input type="button" value="Book now!"/>
             </div>
         </div>
     </section>
