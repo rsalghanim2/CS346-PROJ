@@ -1,45 +1,254 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    
+<!DOCTYPE html> 
+<html lang="el">
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    <title>Abha</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" 
     />
-    <link rel="stylesheet" href="style.css" />
-
-    <title> Abha</title>
+ 
+      <!-- Link Swiper's CSS -->
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+   <!-- Swiper CSS -->
+   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+ 
+   <!-- CSS -->
+   <link rel="stylesheet" href="css/style.css">
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      
+      header {
+        background-color: #569f67;
+        width: 100%;
+        position:absolute;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 120px;
+      }
+      .logo {
+        text-decoration: none;
+        color: #1f3a24;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.8em;
+      }
+      .navigation a {
+        color: #1f3a24;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: 500;
+        padding-left: 30px;
+      }
+      .navigation a:hover {
+        color: rgb(40, 12, 179);
+      }
+        .begin {
+            background-image: url(abha.jpg);
+            background-position:bottom;
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.98;
+        }
 
-      *{
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
+        h2 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: burlywood;
+            -webkit-text-stroke: 1px black;
+            text-align: center;
+            font-size: 90px;
+            text-shadow: 1px 1px 20px black;
+        }
+        .line {
+            width: 150px;
+            height: 4px;
+            background-color: black;
+            margin: 3px auto;
+            border-radius: 5px;
+        }
+        h4 {
+            color: burlywood;
+            -webkit-text-stroke: 1px black;
+            font-size: 25px;
+            margin: 30px;
+            text-shadow: 1px 1px 20px black;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            gap: 2rem;
+        }
+        .about img {
+            width: 550px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow:10px 10px 30px black;
+            opacity:0.98;
+          
+        }
+            .about p, h1 {
+                color: rgb(59, 109, 71);
+                text-align: center;
+                font-family: 'Poppins', sans-serif;
+            }
+            .about h1 {
+                font-size: 50px;
+                text-shadow: 1px 1px 2px black;
+            }
+            .about p{
+                color:black;
+            }
+
+        .Events {
+            display: grid;
+            width: 100%;
+            margin: 50px auto;
+        }
+        .col{
+            width:80%;
+            height:80%;
+            position:relative;
+        }
+            .col input {
+                padding: 5px;
+                margin: 17px;
+                border-radius: 20px;
+                width: 100px;
+                height: 50px;
+                border: none;
+                font-size: 15px;
+                background-color: rgb(57, 107, 69);
+                -webkit-transition-webkit-transform:3s,ease;
+                box-shadow: 2px 2px 10px black;
+                cursor: pointer;
+                font-weight:bolder;
+              
+            }
+                .col input:hover {
+                    -webkit-transform: scale(1.03);
+                }
+                .row .col img {
+                    width: 450px;
+                    height: 300px;
+                    border-radius: 10px;
+                    box-shadow: 5px 5px 20px black;
+                    opacity: 80%;
+                }
+        .row{
+            display:flex;
+            align-items:center;
+            width:100%;
+            justify-content:space-between;
+        }
+        .row .col{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            -webkit-transition-webkit-transform:.3s,ease;
+        }
+        .Events .row {
+            margin-top: 50px;
+            
+        }
+        .Events h1 {
+            color: rgb(59, 109, 71);
+            font-size: 50px;
+            text-shadow: 1px 1px 2px black;
+            font-family: 'Poppins', sans-serif;
+        }
+        .Events h3 {
+            font-size: 4vmin;
+            color: rgb(59, 109, 71);
+            margin: 20px auto;
+            text-shadow: 1px 1px 1px black;
+        }
+        .Events h5{
+            font-size:15px;
+        }
+       .Events p {
+            font-family: 'Poppins', sans-serif;
+            padding: 0px 40px;
+            text-align: center;
+            font-size:15px;
+            position:relative;
+        }
+        .col:hover {
+            -webkit-transform: scale(1.03);
+        }
+        .col a {
+            color: black;
+            text-decoration: none;
+            font-size:20px;
+            text-shadow: 1px 1px 0.5px black;
+        }
+        .col a:hover{
+            text-decoration:underline;
+            
+        }
+       
+        .end {
+            width: 100%;
+            height: 45%;
+            background-color: #569f67;
+        }
+            .end h1 {
+               
+                color: #1f3a24;
+                text-shadow: 0.5px 0.5px 0.5px black;
+
+            }
+
+        .social a {
+            display: inline-block;
+            height: 40px;
+            width: 50px;
+            padding: 10px;
+            background-color: rgb(59, 109, 71);
+            box-shadow: 2px 2px 3px black;
+            opacity: 0.9;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 10px;
+            border-radius: 50%;
+            color: black;
+            -webkit-transition: -webkit-transform,.3s,ease;
+            position: relative;
+            left: 38%;
+            
+           
+        }
+            .social a:hover {
+              -webkit-transform: scale(1.1);
+            }
+/*for resturant sliders*/
+
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+  background-color: #10713f82;
 }
-
-
-body{
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(abha.jpg); background-size: cover; 
-}
-
 .slide-content{
   margin: 0 40px;
   overflow: hidden;
   border-radius: 25px;
 }
 .card{
-    width: 320px;
+    width: 400px;
+    height: 400px;
   border-radius: 15px;
   background-color: #FFF;
 }
@@ -48,7 +257,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 14px;
+  padding: 10px 10px;
 }
 .image-content{
   position: relative;
@@ -59,10 +268,10 @@ body{
 .card-image{
   position: relative;
   height: 100px;
-  width: 100%;
+  width: 300px;
   border-radius: 15%;
 
-  padding: 7px;
+  padding: 5px;
 }
 .card-image .card-img{
   height: 150%;
@@ -75,7 +284,7 @@ body{
 .name{
   font-size: 18px;
   font-weight: 500;
-  color: #333;
+  color: rgb(59, 109, 71);
 }
 .description{
   font-size: 14px;
@@ -93,87 +302,394 @@ body{
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .button:hover{
   background: #265DF2;
 }
+
+.swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
+}
+
+.swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}
+
 </style>
   </head>
   
-  <body >
+    
+     
+    
+      </style>
+  <script></script>
+    <!-- -->
+</head>
+<body>
+  <header>
+  <a href="#" class="logo">ABHA</a>
+  <nav class="navigation">
+      <a href="#Events">Events</a>
+      <a href="#Hotels">Hotels</a>
+      <a href="#Restaurants">Restaurants </a>
+      <a href="index.html">Home</a>
+  </nav>
+</header>
    
+    <section class="begin">
+        <div>
+            <h2>Abha</h2>
+            <div class="line"></div>
+            <h4><strong>This magical place holds secrets to be discovered</strong></h4>
+     </div>
+    </section>
 
-      <br>
-    <div class="slide-container swiper">
-        <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper">
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
+    <section class="about">
 
-                        <div class="card-image">
-                            <img src="green mountain.jpg" alt="" class="card-img">
-                            
-                           
-                        </div>
-                    </div>
+        <img src="abhabg.jpg" />
+        <div class="about-text">
+            <h1><strong>About Abha</strong></h1>
+            <div class="line"></div>
+            <br />
+            <p>
+              Abha, is ideally located in southwestern region of Saudi Arabia. 
+              Its exceptional location allows you to embrace the clouds and wonder 
+              around its mountaintops. While consumed with astonishment and amusement, 
+              you will feel like time traveling hundreds of years back in time as you stumble upon castles and palaces built from the elements taken from their unspoiled environment.   Making your way through the fog, even in summertime, you will easily find its plains and cliffs and its rich diversity
+            </p>
+        </div>
+    </section>
 
-                    <div class="card-content">
-                        <h2 class="name">Green Mountain</h2>
-                        <p class="description">The Green Mountain region is one of the most important destinations 
-                            in the city of Abha. there are many different activities to do, including the following:
-                           <br> - Seeing the entire city of Abha and seeing many unique views.
-                           <br> - restaurants and cafes on top of the mountain; Which provides the visitorS an experience
-                            </p>
-                             <button class="button">View </button>
-                    </div>
-                </div>
-           <br>
-                <div class="card swiper-slide">
-                    <div class="image-content">
+
+    <!--events -->
+    <section class="Events" id="Events">
+      <h1>Events</h1>
+      <div class="line"></div>
+
+      <div class="row">
+          <div class="col">
+              <img src="green mountain.jpg" />
+              <h3>Green Mountain</h3>
+              <h5>Reflecting AlUla’s Beauty, the World’s Largest Mirrored Building</h5>
+              <p>
+                  Maraya is a stunning piece of art set in the desert canyon of Ashar Valley. Designed to blend into the surrounding landscape, it rises from the sand like a mirage. The state-of-the-art structure is covered in 9,740 mirrored panels reflecting AlUla's beauty, making it the largest mirrored building in the world, according to Guinness World Records
+              </p>
+              <p> it was also designed as a fully functioning multi-purpose venue.</p>
+              <input type="button" value="Book now!" />
+
+          </div>
+          <div class="col">
+              <img src="cable car.jpg" />
+              <h3>Cable car</h3>
+              <h5>30 JAN - 3 FEB</h5>
+              <p>After an extremely successful first edition in AlUla, Saudi Tour returns in collaboration with the Saudi Arabia Cycling Federation. Cyclists from around the world will challenge in the third edition of the Saudi Tour between the beautiful surroundings of AlUla</p>
+              <input type="button" value="Book now!" />
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col">
+              <img src="andalus park.jpg" />
+              <h3>ALULA SKIES FESTIVAL</h3>
+              <h5>20 APR - 4 MAY</h5>
+              <p>AlUla’s skies will see 200 colourful balloons flying high over the UNESCO World Heritage Site of Hegra. Alongside the balloons will be a series of immersive events that celebrate the majestic ancient desert and the galaxy above, such as elevated stargazing experiences and much more.</p>
+              <input type="button" value="Book now!" />
+          </div>
+
+          <div class="col">
+              <img src="the high city.jpg" />
+              <h3>THE HIGH CITY</h3>
+              <h5>4 MAR</h5>
+              <p>6 p.m. (about 14 minutes/ 9 km away from the city)The High City includes many options for international restaurants and cafes, most of which overlook the mountains and get foggy in the evening. Its location provides a wonderful angle to watch the sunset.</p>
+              <input type="button" value="Book now!" />
+          </div>
+      </div>
+
+  </section>
+   
+      <!--hotels -->
+      <section class="Events" id="Hotels">
+        <h1>Hotels</h1>
+        <div class="line"></div>
+
+        <div class="row">
+            <div class="col">
+                <img src="Citadines Abha.jpeg" />
+                <h3>Citadines Abha</h3>
+                <p>
+                 
+                </p>
+                <br />
+                <a href="https://www.google.com/maps/place/Citadines+Abha/@18.2410374,42.606007,18z/data=!4m8!3m7!1s0x15fcab9c12a4a367:0xc7ef4cb72090ef70!5m2!4m1!1i2!8m2!3d18.2409075!4d42.6071389"class="location">LOCATION></a>
+                <input type="button" value="Book now!" />
+
+            </div>
+            <div class="col">
+                <img src="Blue Inn Hotel.jpeg" />
+                <h3>Blue Inn Hotel</h3>
+                
+                <br />
+                <a href="https://www.google.com/maps/place/Blue+Inn+%D8%A8%D9%84%D9%88+%D8%A5%D9%86%E2%80%AD/@18.2144353,42.4989261,17z/data=!3m1!4b1!4m8!3m7!1s0x15e354776e310f7f:0x4171996ad36126be!5m2!4m1!1i2!8m2!3d18.2144302!4d42.5011148" class="location">LOCATION></a>
+                <input type="button" value="Book now!" />
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="Boudl Abha Apartment.jpeg" style="height:430px" />
+                <h3>BANYAN TREE ALULA</h3>
+                
+                <br />
+                <a href="https://www.google.com/maps/place/%D9%81%D9%86%D8%AF%D9%82+%D8%A8%D9%88%D8%AF%D9%84%E2%80%AD/@18.2337955,42.5015229,17z/data=!3m1!4b1!4m8!3m7!1s0x15e3546252c67bb7:0xa4679a2999860309!5m2!4m1!1i2!8m2!3d18.2337905!4d42.5057447" class="location">LOCATION></a>
+              
+                <input type="button" value="Book now!"style="height:30px" />
+            </div>
+
+            <div class="col">
+                <img src="OYO 599 Beautat Resort  .jpg" />
+                <h3>OYO 599 Beautat Resort  </h3>
+               
+                <br />
+                <a href="https://www.google.com/maps/place/OYO+599+Beautat+Resort/@18.2528081,42.4966693,17z/data=!3m1!4b1!4m8!3m7!1s0x15e355b3af81739b:0x6a85ff44004bce8e!5m2!4m1!1i2!8m2!3d18.252803!4d42.498858" class="location">LOCATION></a>
+                <input type="button" value="Book now!" style="height:30px" />
+            </div>
+        </div>
+    </section>
+
+    
+     <!-- resturnats -->
+      <section class="Events">
+        <h1>restaurants</h1>
+        <div class="line"></div>
+
+        <div class="slide-container swiper">
+          <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+                  <div class="card swiper-slide">
+                      <div class="image-content">
+                        <!---<span class="overlay"></span> -->
+        
+
+            
                         
                         <div class="card-image">
-                            <img src="cable car.jpg" alt="" class="card-img">
+                            <img src="al sinara.jpeg" alt="" class="card-img">
                             
                            
                         </div>
                     </div>
-
+  
                     <div class="card-content">
-                        <h2 class="name">Cable Car</h2>
-                        <p class="description">TThe Abha cable car is one of the interesting experiences that tourism in Abha offers to all its visitors.
-                             The experience of riding this cable car will give you
-                              wonderful views from a height of 1600 The ride lasts for 
-                              25 to 30 minutes, and once you reach the top of the hill,
-                               you will find a number of restaurants and food stalls that offer everything from 
-                               snacks, drinks, and ice cream. 
+                        <h2 class="name">AL sinara</h2>
+                        <p class="description">
+                          working ours:<br> 12pm- 12am 
+                          <br>Cuisine:<br>Middle Eastern,
+                          Seafood
+                    
                            .</p>
+  
                              <button class="button">View </button>
                     </div>
                 </div>
-
-                <br>
-                <div class="card swiper-slide">
+                  <div class="card swiper-slide">
                     <div class="image-content">
                         
                         <div class="card-image">
-                            <img src="andalus park.jpg" alt="" class="card-img">
+                            <img src="roof.jpg" alt="" class="card-img">
                             
                            
                         </div>
                     </div>
-
+  
                     <div class="card-content">
-                        <h2 class="name">Andalus Park </h2>
-                        <p class="description">Andalus Park is characterized by wide green spaces, a calm atmosphere, 
-                            in addition to its distinctive location and containing a large number of restaurants, 
-                            not only this, but also includes areas designated for exercise, walking paths, 
-                            and a games area far from the public street to suit children to play safely
-                            .</p>
+                        <h2 class="name">The Roof Restaurant</h2>
+                        <p class="description">
+                          working ours:<br> 12pm- 12am
+                          <br> Cuisine: <br>Middle Eastern Cuisine
+                           .</p>
+  
                              <button class="button">View </button>
                     </div>
                 </div>
+  
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                      
+                      <div class="card-image">
+                          <img src="glass garsen.jpg" alt="" class="card-img">
+                          
+                         
+                      </div>
+                  </div>
+                  
+  
+                  <div class="card-content">
+                      <h2 class="name">The glass garden  </h2>
+                      <p class="description">
+                        working ours:<br> 12pm- 2am 
+                        <br> Cuisine: <br>Deli, Grill, European, Central European, Austrian, International
+                          .</p>
+                           <button class="button">View </button>
 
+                  </div>
+              </div>
+  
+              <div class="card swiper-slide">
+                <div class="image-content">
+                    
+                    <div class="card-image">
+                        <img src="sawaja.jpg" alt="" class="card-img">
+                        
+                       
+                    </div>
+                </div>
+                
 
-  </body>
+                <div class="card-content">
+                    <h2 class="name">Sawaja  </h2>
+                    <p class="description">
+                      working ours:<br> 12pm- 2am 
+                      <br> Cuisine: <br>American
+              
+                        .</p>
+                         <button class="button">View </button>
+                         
+                </div>
+            </div>
 
-  </html>
+                </div>
+              </div>
+              <div class="swiper-button-next swiper-navBtn"></div>
+              <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+      
+            </div>
+  
+                  
+         
+                 <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        
+        
+  
+        var swiper = new Swiper(".slide-content", {
+      slidesPerView: 3,
+      spaceBetween: 25,
+      loop: true,
+      centerSlide: 'true',
+      fade: 'true',
+      grabCursor: 'true',
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints:{
+          0: {
+              slidesPerView: 1,
+          },
+          520: {
+              slidesPerView: 2,
+          },
+          950: {
+              slidesPerView: 3,
+          },
+      },
+    });
+      </script>
+        
+    </section>
+
+    <footer>
+      <section class="end">
+          <h1>CONNECT WITH US</h1>
+          <br />
+          <br />
+          <div class="social">
+
+              <a href="https://www.facebook.com/ExperienceAlUla/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/ExperienceAlUla"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/experiencealula/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@experiencealula"><i class="fab fa-tiktok"></i></a>
+          </div>
+      </section>
+  </footer>
+</body>
+
+<!-- Swiper JS -->
+      <!--Uncomment this line-->
+      <script src="js/swiper-bundle.min.js"></script>
+
+      <!-- JavaScript -->
+        <!--Uncomment this line-->
+      <script src="js/script.js"></script>
+  
+</html>
