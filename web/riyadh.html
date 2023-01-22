@@ -1,295 +1,577 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="el">
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <title>RIYADH</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="style.css" />
-    <title>Explore Riyadh</title>
+
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-      * {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-      }
-
-      header {
-        background-color: #569f67;
-        width: 100%;
-        position: fixed;
-        z-index: 999;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 120px;
-      }
-      .logo {
-        text-decoration: none;
-        color: #1f3a24;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.8em;
-      }
-      .navigation a {
-        color: #1f3a24;
-        text-decoration: none;
-        font-size: 1.1em;
-        font-weight: 500;
-        padding-left: 30px;
-      }
-      .navigation a:hover {
-        color: rgb(40, 12, 179);
-      }
-      section {
-        padding: 100px 120px;
-      }
-      .main {
-        width: 100%;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        background: url(saudi-arabia-landmark-global-travel-and-journey-vector-8788484.jpeg)
-          no-repeat;
-        background-size: 600px;
-        background-position: right center;
-        background-attachment: fixed;
-      }
-      .main h2 {
-        color: rgb(59, 109, 71);
-        font-size: 1.4em;
-        font-weight: 500;
-      }
-      .main h2 span {
-        display: inline-block;
-        margin-top: 6px;
-        color: rgb(59, 109, 71);
-        font-weight: 600;
-        font-size: 3em;
-      }
-      .mian h3 {
-        color: aqua;
-        font-size: 2em;
-        font-weight: 700;
-        letter-spacing: 1px;
-        margin-top: 10px;
-        margin-bottom: 30px;
-      }
-      .main-btn {
-        color: #fff;
-        background-color: #3a6c42;
-        text-decoration: none;
-        font-size: 1.1em;
-        font-weight: 600;
-        display: inline-block;
-        padding: 0.9375em 1.1875em;
-        letter-spacing: 1px;
-        border-radius: 30px;
-        margin-bottom: 10px;
-        transition: 0.5s ease;
-      }
-      .main-btn:hover {
-        background-color: #79b782;
-        transform: scale(1.1);
-      }
-      .social-icons a {
-        font-size: 1.7em;
-        padding-right: 30px;
-      }
-      .title {
-        display: flex;
-        justify-content: center;
-        color: #3a6c42;
-        font-size: 2.2em;
-        font-weight: 800;
-        margin-bottom: 30px;
-      }
-      .content {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      .card {
-        background-color: #fff;
-        width: 21.25em;
-        box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-        border-radius: 10px;
-        padding: 25px;
-        margin: 15px;
-        transition: 0.7s ease;
-      }
-      .card:hover {
-        transform: scale(1.1);
-      }
-      .icon {
-        color: #3a6c42;
-        font-size: 3em;
-        text-align: center;
-      }
-      .info {
-        text-align: center;
-      }
-      .info h3 {
-        color: #3a6c42;
-        font-size: 1.2em;
-        font-weight: 700;
-        margin: 10px;
-      }
-      .saudi {
-        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-        color: rgb(59, 109, 71);
-      }
-      a.cards {
-        text-decoration: none;
-        color: #3a6c42;
-        font-size: 1.2em;
-        font-weight: 700;
-        margin: 10px;
-      }
-      .LearnMore {
-        width: 700px;
-        height: 300px;
-        border-radius: 20px;
-        background-color: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-        padding: 25px;
-        margin: 15px;
-        margin-left: 220px;
-        position: relative;
-        /* display: flex;
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap; */
-      }
-      .lan-img {
-        width: 300px;
-        height: 250px;
-        position: relative;
-      }
-      .lan-h2 {
-        margin-left: 320px;
-        position: absolute;
-        color: #569f67;
-      }
-      .lan-p {
-        position: absolute;
-        display: block;
-        font-size: 15px;
-        margin-left: 320px;
-        margin-top: 50px;
-        /* padding: 0; */
-        /* line-height: 1.7; */
-      }
-      .currency-h2 {
-        position: absolute;
-        color: #569f67;
-        display: inline;
-      }
-      .currency-p {
-        width: 320px;
-        position: absolute;
-        display: block;
-        font-size: 15px;
-        /* margin-left: 320px; */
-        margin-top: 50px;
-      }
-      .cuurency-img {
-        width: 300px;
-        height: 250px;
-        position: relative;
-        margin-left: 360px;
-        margin-bottom: 10000px;
-        display: inline;
-      }
-      span {
-        font-weight: bold;
-      }
-      .climate-h2 {
-        margin-left: 320px;
-        position: absolute;
-        color: #569f67;
-      }
-      .climate-p {
-        position: absolute;
-        display: block;
-        font-size: 15px;
-        margin-left: 320px;
-        margin-top: 50px;
-      }
-      .climate-img {
-        width: 300px;
-        height: 250px;
-        position: relative;
-      }
-      .container 
-      {  
-      background-color: rgba(116, 179, 147, 0.7);
-      width: 300px;
-      height: 500px;
-      padding: 20px;
-      margin-left: 500px;
-      margin-top: 50px;
-      border-radius: 20px;
-
-      @media (max-width: 1023px) {
-        header {
-          padding: 12px 20px;
+        .begin {
+            background-image: url(Riyadh.jpg);
+            background-position:bottom;
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.98;
         }
-        .navigation {
-          padding-left: 10px;
+
+        h2 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(59, 109, 71);
+            -webkit-text-stroke: 1px black;
+            text-align: center;
+            font-size: 90px;
+            text-shadow: 1px 1px 20px black;
         }
-        .title {
-          font-size: 1.8em;
+        .line {
+            width: 150px;
+            height: 4px;
+            background-color: black;
+            margin: 3px auto;
+            border-radius: 5px;
         }
-        section {
-          padding: 80px 20px;
+        h4 {
+            color:rgb(59, 109, 71);
+            -webkit-text-stroke: 1px black;
+            font-size: 25px;
+            margin: 30px;
+            text-shadow: 1px 1px 20px black;
         }
         
-      }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <a href="#" class="logo">Explore Saudi</a>
-      <nav class="navigation">
-        <a href="#">Cities</a>
-        <a href="#">Event</a>
-        <a href="#">About us</a>
-      </nav>
-    </header>
-    <section class="main">
-        <div>
-          <h2>Welcome to <span class="saudi">Riyadh</span><br/></h2>
-        </div>
-    </section>
-    <section class="container">
-        <div>
-            <img src="world.jpeg" alt="world" height="250" width="250" class="center">
-            <p >Boulivard World</p>
-        </div>
-    </section>
-    <section class="container">
-        <div>
-            <img src="city.jpg" alt="city" height="250" width="250" class="center">
-            <p >Boulivard City</p>
-        </div>
-    </section>
-    <section class="container">
-        <div>
-            <img src="zal.jpg" alt="zal" height="250" width="250" class="center">
-            <p >Souq Alzal</p>
-        </div>
-    </section>
-  </body>
-</html>
+        .about {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            gap: 2rem;
+        }
+        .about img {
+            width: 550px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow:10px 10px 30px black;
+          
+        }
+            .about p, h1 {
+                color: rgb(59, 109, 71);
+                text-align: center;
+                font-family: 'Poppins', sans-serif;
+            }
+            .about h1 {
+                font-size: 50px;
+                text-shadow: 1px 1px 2px black;
+            }
+            .about p{
+                color:black;
+            }
 
+        .Events {
+            display: grid;
+            width: 100%;
+            margin: 50px auto;
+        }
+        .highlight{
+            display: grid;
+            width: 100%;
+        }
+        .col{
+            width:80%;
+            height:80%;
+            position:relative;
+        }
+        .row .col img {
+            width: 450px;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px black;
+        }
+        .row{
+            display:flex;
+            align-items:center;
+            width:100%;
+            justify-content:space-between;
+        }
+        .row .col{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            -webkit-transition:-webkit-transform,.3s,ease;
+        }
+        .Events .row {
+            margin-top: 50px;
+            cursor: pointer;
+        }
+        .Events h1 {
+            color: rgb(59, 109, 71);
+            font-size: 50px;
+            text-shadow: 1px 1px 2px black;
+            font-family: 'Poppins', sans-serif;
+        }
+        .Events h3 {
+            font-size: 4vmin;
+            color: rgb(59, 109, 71);
+            margin: 20px auto;
+            text-shadow: 1px 1px 1px black;
+        }
+        .Events h5{
+            font-size:15px;
+        }
+       .Events p {
+            font-family: 'Poppins', sans-serif;
+            padding: 0px 40px;
+            text-align: center;
+            font-size:15px;
+        }
+        .highlight h1{
+            color: rgb(59, 109, 71);
+            font-size: 40px;
+            text-shadow: 1px 1px 2px black;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .highlight h3{
+            color:rgb(255, 255, 255);
+            text-shadow: 0 0 5px #999;
+            text-align: left;
+        }
+        .col:hover{
+            -webkit-transform:scale(1.03);
+        }
+        .end {
+            width: 100%;
+            height: auto;
+            background-color: #569f67;
+        }
+        .card{
+            width: 300px;
+            height: 250px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+        }
+        .card1{
+            background-image: url(LaBras.jpeg);
+        }
+        .card2{
+            background-image: url(orjo.jpeg);
+        }
+        .card3{
+            background-image: url(Sig.webp);
+        }
+        .card4{
+            background-image: url(lema.webp);
+        }
+        .card5{
+            background-image: url(Malmoum.jpeg);
+        }
+        .card6{
+            background-image:url(Fabr.jpeg)
+        }
+        .card7{
+            background-image: url(moon.jpeg);
+        }
+        .card8{
+            background-image: url(elix.jpeg);
+        }
+        .card9{
+            background-image: url(ECRU.jpeg);
+        }
+        .card11{
+            background-image: url(brai.jpeg);
+        }
+        .card12{
+            background-image: url(hilton.jpeg);
+        }
+        .card13{
+            background-image: url(ritz.webp);
+        }
+        .card14{
+            background-image: url(fair.jpeg);
+        }
+        .card15{
+            background-image: url(hyat.jpeg);
+        }
+        .card16{
+            background-image: url(rosh.jpeg);
+        }
+        .card:hover{
+            transform: translateY(-10px);
+        }
+        .card p{
+            text-shadow: 1px 1px 2px black;
+            font-size: 10px;
+            color: rgb(214, 204, 204);
+        }
+        .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+     /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-pagination{
+        color: #000;
+    }
+
+        .gallery{
+            height: 80%;
+            width: 100%;
+            display: flex;
+            margin: 5% auto 0;
+            box-sizing: border-box;
+        }
+        .gallery h1{
+            color: rgb(59, 109, 71);
+            font-size: 40px;
+            text-shadow: 1px 1px 2px black;
+            font-family: 'Poppins', sans-serif;
+        }
+        .img-box{
+            margin: 0 1%;
+            flex-grow: 1;
+            flex-basis: 0;
+            transition: .5s;
+        }
+        .img-box img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+        .img-box:hover{
+            flex-basis: 50%;
+        }
+        .active{
+            flex-basis: 50%;
+        }
+        .gallery:hover .active{
+            flex-basis: 0;
+        }
+        .img-box:nth-child(1):hover{
+            flex-basis: 30%;
+        }
+        .img-box h3 {
+            position: relative;
+            color: rgb(59, 109, 71);
+            font-size: 15px;
+        }
+    </style>
+    <!-- -->
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Explore Saudi</a>
+        <nav class="navigation">
+            <a href="#">Cities</a>
+            <a href="#">Event</a>
+            <a href="#">About us</a>
+        </nav>
+    </header>
+    <section class="begin">
+        <div>
+            <h2>Riyadh</h2>
+            <div class="line"></div>
+            <h4><strong>Live the Modern Life to its Fullest</strong></h4>
+     </div>
+    </section>
+
+    <section class="about">
+        <img src="riya.jpeg" />
+        <div class="about-text">
+            <h1><strong>About Riyadh</strong></h1>
+            <div class="line"></div>
+            <br />
+            <p>
+                discover the birthplace of the Kingdom of Saudi Arabia and sophisticated culture,
+                shopping, and dining. Prayer times set the pace for life in one of the country's most conservative cities,
+                and gleaming architecture blends with historic landmarks from the kingdom's earliest years.
+            </p>
+        </div>
+    </section>
+    <!--events -->
+    <section class="Events">
+        <h1>Events</h1>
+        <div class="line"></div>
+
+        <div class="row">
+            <div class="col">
+                <img src="edg.jpg" />
+                <h3>THE EDGE OG THE WORLD</h3>
+                <p>
+                    The Edge of the World is a place in Riyadh that’s known for its dramatic cliffs and panoramic views. Instead of visiting alone, going on a guided tour means there’s no need to worry about route planning—a guide can show you the best trail to go on. Once at the top, relax and enjoy a picnic break, and admire views of Mount Fahren.
+                </p>
+                
+                <a> </a>
+
+            </div>
+            <div class="col">
+                <img src="zal3.jpg" />
+                <h3>SOUQ ALZAL</h3>
+                <p>traditional market in Riyadh, brings together the past and present of the Kingdom, 
+                    giving the younger generation a chance to experience life in a different age, 
+                    while elderly visitors can expect strong feelings of nostalgia.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="sand.jpeg" />
+                <h3>RED SAND DUNES</h3>
+                <p>Enjoy a special desert trip where our local drivers and experience walking on the red sand where calm and loneliness and enjoy watching the sunset and lighting a fire in the evening and chatting and watching the stars</p>
+            </div>
+
+            <div class="col">
+                <img src="mas.jpeg" />
+                <h3>ALMASMAK</h3>
+                <p>Avoid being stuck on a large group tour, and make your visit to Al Masmak Fortress as stress-free as possible with this self-guided walking tour. Simply use your phone and headphones to access an audio tour, which conveniently syncs according to your location. Along the way, a historian’s commentary helps you learn plenty of fun facts and secret tales that you likely wouldn’t uncover if exploring alone.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="king.jpg" />
+                <h3>SKY BRIDGE AT KINGDOM CENTER</h3>
+                <p>Take a stunning panoramic view of the beauty of the city through highly secure glass panels. These panels let you enjoy the view of the starry nights and contemplate the yellow lights reflected on the streets and buildings of Riyadh from the Sky Bridge. Another way to seize the moment is by taking selfies where the glamour of the city behind you on a clear day.</p>
+            </div>
+
+            <div class="col">
+                <img src="Mura.jpg" />
+                <h3>AL MURBBA HISTORICAL PALACE</h3>
+                <p>The walls of Al Murabba Historial Palace are like a window to the rich history of Riyadh and a scene from its ancient memory. The 1680 m2 of land occupied by the palace overflows with the memories of the place, and the historical events it witnessed, along with the glory that was made on its land.</p>
+            </div>
+        </div>
+    </section>
+
+   <section class="highlight">
+    <h1>Rustrants & Cafes</h1>
+    <div class="line"></div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"> 
+            <div class="card card1">
+                <h3>La Brasserie</h3>
+            <p>La Brasserie’s spread of international plates dished out in an upscale and modern environment in the Al Faisaliah Hotel set the standard. Every detail appears to be thought of with consideration from the interactive stations to the oh-so-tempting displays.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card2">
+                <h3>Al Orjouan</h3>
+            <p>The all-day dining restaurant understands what makes a brilliant buffet: variety, atmosphere, something for all ages and ambience. The experience has all of that in spades, including a great mix of international and Middle Eastern flavours in a venue that will certainly not go unnoticed.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card3">
+                <h3>signor sassi</h3>
+            <p>Villa Signor Sassi welcomes guests to a truly unique fine-dining experience. Signor Sassi embraces its guests with genuine Italian hospitality and takes them on a culinary journey through its exceptional contemporary Italian cuisine. </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card4">
+                <h3>Le maschou</h3>
+            <p>Fine dining symbol of rich culinary flavours and a sophisticated ambience from the old alleys of France. We pursue this by offering our guests a unique and one-of-a-kind dining experience, an exceptionally authentic array of our wood-fire smoked meats will leave customers always craving for more.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card5">
+                <h3>Malmoum Cafe</h3>
+            <p>Malmoum Cafe just opened its doors in Riyadh’s Lakum Artspace. The cafe has actual and latte art too. The venue is spacious and has calming vibes, head here for an evening full of art and coffee.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card6">
+                <h3>Fabrica de Cafe</h3>
+            <p>Portal to the Mediterranean with neutral tones, warm light, ceramic vases, and cosy corners carved out of the walls. The cafe offers classic French pastries, chunky cookies, and ice cream alongside a range of hot and cold drinks.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card7">
+                <h3>Moon Shell Cafe</h3>
+            <p>Moon Shell cafe is one of the few exclusively vegan/vegetarian cafes in Riyadh. Its health-conscious menu is complemented by a distinctly bohemian look and feel.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card8">
+                <h3>Elixir Bunn</h3>
+            <p>awarded ‘Best Design in the Hospitality Sector’ by Architectural Digest Middle East, and for good reason. From terrazzo flooring to grand arches to a winding stairway in an unexpected blue, the cafe is a sight to behold.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card9">
+                <h3>ECRU Cafe</h3>
+            <p>Ecru comes from the French word écru, which means “unbleached.”.this spot seems to be perfect for a sunset coffee trip. Sip on lattes, or its signature blondey latte while you marvel at the city ahead.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <br> <br>
+        <div class="swiper-pagination"></div>
+       
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+   </section>
+
+   <section class="highlight">
+    <h1>Hotels</h1>
+    <div class="line"></div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide"> 
+            <div class="card card11">
+                <h3>Braira Hotel</h3>
+            <p>The rooms are fitted with a flat-screen TV. Certain rooms have a seating area for your convenience. Every room is equipped with a private bathroom fitted with a shower and bidet only. There is a 24-hour front desk at the property.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card12">
+                <h3>Hilton Hotel</h3>
+            <p>Hilton Riyadh Hotel & Residences provides experiences for business & leisure guests alike. Our hotel offers stylish guest rooms, wide range of services, spacious multi-purpose meetings facilities, & world-class dining options. </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card13">
+                <h3>Ritz Carlton</h3>
+            <p>Among the most majestic five-star hotels in Saudi Arabia, The Ritz-Carlton, Riyadh, takes guests on a captivating journey throughout its 52 acres of lavishly landscaped gardens, spacious and sumptuous accommodations, fine-dining restaurants and 62.000 square feet of elegant event space. </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card14">
+                <h3>Fairmont</h3>
+            <p>The new hotel forms a key component of the Business Gate community in Riyadh, a mixed-use development project and business district featuring over 70 multinational and regional companies. </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card15">
+                <h3>Hyatt Regency</h3>
+            <p>Hyatt Regency Riyadh Olaya is located in the heart of the capital, next to the vibrant Tahlia Street and close to commercial and retail districts such as the financial district, Riyadh International Convention & Exhibition Centre and its only 35Km from King Khalid International Airport.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card card16">
+                <h3>Rosh Rayhaan</h3>
+            <p>Located in the heart of Riyadh, the 5-star Rosh Rayhaan by Rotana offers 236 splendid rooms and suites ranging from classic rooms to royal suites in addition to the Club Rotana rooms that specifically meet the needs of a business traveler.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <br> <br>
+        <div class="swiper-pagination"></div> 
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+   </section>
+   
+    <section class="highlight">
+        <h1>HIGHLIGHT</h1>
+        <div class="line"></div>
+
+        <div class="gallery">
+            <div class="img-box active">
+                <img src="seas.jpeg">
+                <h3>Riyadh Season</h3>
+            </div>
+            <div class="img-box">
+                <img src="Jedd.jpeg">
+                <h3>Jeddah Season</h3>
+            </div>
+            <div class="img-box">
+                <img src="Diriy.jpeg">
+                <h3>Diriyah Season</h3>
+            </div>
+            <div class="img-box">
+                <img src="alula.jpeg">
+                <h3>Alula Season</h3>
+            </div>
+            <div class="img-box">
+                <a><img src="abha.jpeg"></a>
+                <h3>Abha Season</h3>
+            </div>
+        </div>
+    </section>
+
+
+     
+   <footer>
+       <section class="end">
+           <h1>CONNECT WITH US</h1>
+          
+       </section>
+   </footer>
+</body>
+
+
+</html>
