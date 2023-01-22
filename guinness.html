@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+     .mainHeader {
+         width: 100%;
+         height: 100vh;
+         position: relative;
+         padding: 0 5%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background: url(guinnesBackground.webp) no-repeat;
+        background-size: 600px;
+        /* background-position: right center; */
+        background-attachment: fixed;
+        background-size: cover;
+       
+      }
+      nav{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px 8%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .logo{
+        width: 80px;
+        margin-left: 0;
+    
+      }
+      nav ul li{
+        list-style: none;
+        display: inline;
+        margin-left: 40px;
+      }
+      nav ul li a{
+        text-decoration: none;
+        color: rgb(251, 218, 175);
+        font-size: 20px;
+      }
+      .content{
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(251, 218, 175);
+        text-align: center;
+      }
+      .video{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        display: flex;
+      }
+      .recordPhoto{
+        display: block;
+       margin-left: auto;
+       margin-right: auto;
+       width: 50%;
+      }
+      .info{
+        text-align: center;
+        padding: 10px;
+        margin: 20px;
+        font-size: 20px;
+        
+      }
+     
+      @media(min-aspect-ratio:16/9){
+        .video{
+            width: 100%;
+            height: auto;
+        }
+      }
+      @media(max-aspect-ratio:16/9){
+        .video{
+            width: auto;
+            height: 100%;
+        }
+      }
+      
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="mainHeader">
+        <video autoplay loop muted plays-inline class="video">
+            <source src="guonnesVideo 2.mov" type="video/mp4">
+        </video>
+        <nav>
+            <img src="logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="#Cities">Cities</a></li>
+                <li><a href="#Country">Country profile</a></li>
+                <li><a href="#learnMore">Learn More</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Saudi Arabia In Guinness World Records</h1>
+        </div>
+        </div>
+        <br>
+        <section class="info">
+            <h1 class="title">Saudi Arabia journey to the Guinness World Records</h1>
+            <p>Huge amount of efforts to enhance entetainment and tourism over the past years are embellished with numerous historic records which paved the way for the Kingdom to achieve titles and recognitions from the Guinness World Records</p>
+       
+        <h3>Here are the records</h3>
+        <br>
+        <h5>From the largest mirrored building to the tallest lighthouse, KSA has them all</h5>
+        <div class="records">
+            <p>Riyadh’s loudest weekend, aka MDLBEAST Soundstorm, bagged an award for most LED lights in a display by using nearly 60,053,376 LED lights (yes, they counted) over at the Big Beast stage.</p>
+            <figure>            
+                <img src="MDLBEAST.jpeg" alt="MDLBEAST photo" width="400" height="400" class="recordPhoto">
+                <figcaption class="recordPhoto">MDLBEAST</figcaption>
+            </figure>
+            <br>
+            <p>Given it was a season of epic firsts and record-breaking moments, it’s no surprise to see Riyadh Season on the list of Saudi Arabia Guinness World Records for 2023. Riyadh Season was awarded the most simultaneous pepper’s ghost illusions of a person at five illusions for a Mohammed Abdo concert.</p>
+            <figure>
+                <img src="mohammad-abdo.jpeg" alt="mohammad-abdo" width="400" height="400" class="recordPhoto">
+                <figcaption class="recordPhoto">Mohammed Abdo</figcaption>
+            </figure>
+            <br>
+            <p>Moving across the country, AlUla won the largest mirrored building for Maraya Social. This is one of the Saudi Arabia Guinness World Records for 2023 that you can still visit so grab your camera and head over to what we’d say is also one of the record-breaking photo spots in Saudi.</p>
+            <figure>
+                <img src="Maraya-alula.jpeg" alt="Maraya-alula" width="400" height="400" class="recordPhoto">
+                <figcaption class="recordPhoto">Maraya</figcaption>
+            </figure>
+            <br>
+            <p>Looking for more Saudi Arabia Guinness World Records? The largest clock face was awarded to the Makkah Clock Tower, and yes, you can still marvel at it today.</p>
+            <figure>
+                <img src="makkah.png" alt="makkah" width="400" height="400" class="recordPhoto">
+                <figcaption class="recordPhoto">Makkah Clock Tower</figcaption>
+            </figure>
+        </div>
+    </section>
+        <!--  https://www.timeoutriyadh.com/attractions/saudi-arabia-guinness-world-records-for-2023 -->
+        <!-- this linlk to continue work -->
+  </body>
+</html>
