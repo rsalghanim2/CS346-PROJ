@@ -251,30 +251,51 @@
         padding: 0;
         border-bottom: 1px solid black;
         margin-left: 50px;
+        color: #3a6c42;
+        font-weight: bold;
       } 
-
-       .tab {
+      .tab {
        cursor: pointer;
        padding: 10px;
       }
-
-    .tab.active {
+      .tab.active {
       background-color: #CCC;
       border-radius: 20px;
-    }
+      }
      .tab:hover {
        background-color: #AAA;
        border-radius: 20px;
        }
 
-    .tab-content {
+      .tab-content {
       margin-left: 20px;
       margin-right: 20px;
-      
      }
      h2.climate{
       display: inline;
+      color: #569f67;
      }
+     .phone-h2 {
+        position: absolute;
+        color: #569f67;
+        display: inline;
+      }
+      .phone-p {
+        width: 320px;
+        position: absolute;
+        display: block;
+        font-size: 15px;
+        /* margin-left: 320px; */
+        margin-top: 50px;
+      }
+      .phone-img {
+        width: 300px;
+        height: 250px;
+        position: relative;
+        margin-left: 360px;
+        margin-bottom: 10000px;
+        display: inline;
+      }
      
      
      
@@ -305,7 +326,7 @@
         <a href="#Cities">Cities</a>
         <a href="#Country">Country profile</a>
         <a href="#learnMore">Learn more</a>
-        <a href="#">About us</a>
+        <a href="about-us.html">About us</a>
       </nav>
     </header>
 
@@ -330,7 +351,7 @@
       <div class="content">
         <div class="card">
           <div class="icon">
-            <i class=""></i>
+            <i class=""><img src="RUH.png" ></i>
           </div>
           <div class="info">
             <a class="cards" href="https://www.google.com">Riyadh</a>
@@ -338,7 +359,7 @@
         </div>
         <div class="card">
           <div class="icon">
-            <i class=""></i>
+            <i class=""><img src="alula.png"></i>
           </div>
           <div class="info">
             <a class="cards" href="Alula.html">Alula</a>
@@ -346,7 +367,7 @@
         </div>
         <div class="card">
           <div class="icon">
-            <i class=""></i>
+            <i class=""><img src="ahsa.png"></i>
           </div>
           <div class="info">
             <a class="cards" href="Alhasa.html">Alhasa</a>
@@ -354,7 +375,7 @@
         </div>
         <div class="card">
           <div class="icon">
-            <i class=""></i>
+            <i class=""><img src="jeddah.png" ></i>
           </div>
           <div class="info">
             <a class="cards" href="https://www.google.com">Jeddah</a>
@@ -362,7 +383,7 @@
         </div>
         <div class="card">
           <div class="icon">
-            <i class=""></i>
+            <i class=""><img src="abha.png" ></i>
           </div>
           <div class="info">
             <a class="cards" href="Abha.html">Abha</a>
@@ -370,7 +391,7 @@
         </div>
         <div class="card">
           <div class="icon">
-            <i class=""></i>
+            <i class=""><img src="kac.png"></i>
           </div>
           <div class="info">
             <a class="cards" href="https://www.google.com">KAEC</a>
@@ -383,7 +404,7 @@
       <div class="content">
         <div class="card">
           <div class="icon">
-            <i class=""></i>
+            <i class=""><img src="record.png"></i>
           </div>
           <div class="info">
             <a class="cards" href="guinness.html">Saudi Arabia In Guinness World Records </a>
@@ -391,7 +412,7 @@
         </div>
         <div class="card">
           <div class="icon">
-            <i class=""></i>
+            <i class=""><img src="help.png"></i>
           </div>
           <div class="info">
             <a class="cards" href="https://www.google.com">Saudi Arabia role in Humanitarian aid</a>
@@ -399,7 +420,7 @@
         </div>
         <div class="card">
           <div class="icon">
-            <i class=""></i>
+            <i class=""><img src="saudi.png"></i>
           </div>
           <div class="info">
             <a class="cards" href="https://www.google.com">Saudi Arabia in 2030</a>
@@ -448,31 +469,32 @@
                </ul>
         <div class="tab-content">
           <div id="spring" data-tab-content class="active">
-            <h3>Spring</h3>
+            <h3 style="color: #3a6c42">Spring</h3>
             <br>
             <p><span> Mid-March to Mid-June</span>
               Spring in Saudi Arabia can be brisk, particularly in the north, where the temperature at night can drop below 15 degrees C. The central and southern regions are warmer, averaging around 20 degrees after nightfall. Rainfall is at its highest during spring, particularly in the central region and in the southwest over the Aseer Mountains.  
              </p>
           </div>
           <div id="Summer" data-tab-content>
-            <h3>Summer</h3>
+            <h3 style="color: #3a6c42">Summer</h3>
             <br>
-            <p><span> Mid-June to Mid-September</span>
+            <p><span > Mid-June to Mid-September</span>
             With the exception of the comparatively mild highlands in the southwest, summer signals the start of rising temperatures across most of the country, with the average hovering around 45 degrees C. The early mornings and long evenings are more temperate, so take advantage of the warm seas to explore Saudi’s world-class scuba diving sites, or try sailing and snorkeling.
            
           </p>
           </div>
           <div id="Autumn" data-tab-content>
-            <h3>Autumn</h3>
+            <h3 style="color: #3a6c42">Autumn</h3>
             <br>
             <p>
              <span> Mid-September to Mid-December</span>
               Autumn brings gentler weather and cool breezes in both Saudi Arabia’s northern regions and the southwestern highlands. While daytime temperatures remain warm and can reach the 30s in early fall, evenings are milder and fit for outdoor strolling, especially along Jeddah’s waterfront, indulging in al-fresco dining or visiting Al Ahsa’s cool desert springs.
               
               </p>
-          </div> <div id="Winter" data-tab-content>
+          </div> 
+          <div id="Winter" data-tab-content>
            
-            <h3>Winter</h3>
+            <h3 style="color: #3a6c42">Winter</h3>
             <br>
             <p>
              <span> Mid-December to Mid-March</span>
@@ -480,6 +502,25 @@
               </p>
           </div>
         </div>
+        </div>
+      </div>
+      <div class="LearnMore">
+        <div class="phone">
+          <h2 class="phone-h2">Useful Contacts</h2>
+          <p class="phone-p">
+           <span>Police</span>: 999
+           <br>
+           <span> Saudi Ambulance</span>: 997
+           <br>
+           <span>Civil Defense</span>: 998
+           <br>
+           <span>For traffic accidents</span>: 993
+           <br>
+           <span>Highway Patrol</span>: 996
+           <br>
+            <span>Border Guard</span>: 994
+          </p>
+          <img class="phone-img" src="phone-contacts.webp" alt="phone" />
         </div>
       </div>
     </section>
