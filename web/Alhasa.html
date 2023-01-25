@@ -48,6 +48,14 @@
             text-shadow: 1px 1px 20px black;
         }
 
+        h3 {
+            color: darkolivegreen;
+            -webkit-text-stroke: 1px black;
+            font-size: 25px;
+            margin: 30px;
+            text-shadow: 1px 1px 20px black;
+            text-align: center;
+        }
         .about {
             display: grid;
             grid-template-columns: repeat(2,1fr);
@@ -327,6 +335,18 @@
             font-size: 15px;
         }
         
+        .clockbox {
+	margin: 100px ;
+	height: 100px; width: 370px;
+	border-radius: 10px;
+	box-shadow:  rgba(0, 0, 0, 0.788);
+    transform: translate(50%, -50%);
+    font-size: 10px;
+    text-align: center;
+    color: darkolivegreen;
+    align-items:center;
+        
+}
     </style>
     <!-- -->
 </head>
@@ -340,11 +360,20 @@
         <a href="index.html">Home</a>
     </nav>
 </header>
-    <section class="begin">
+<div></div>
+    <section class="begin" class="clockbox" >
+        
         <div>
             <h2>Alhasa</h2>
             <div class="line"></div>
             <h4><strong>Live the Modern Life to its Fullest</strong></h4>
+            <!--time-->
+            <h3 id="displayDate"> </h3>
+            <h3 id="displayDateTime"></h3>
+        </div>
+            
+        </div>
+           
      </div>
     </section>
 
@@ -596,6 +625,32 @@
         </div>
     </section>
 
+
+    <!--clocl script-->
+    <script>
+    function displaytime(){
+    var session = "";
+    var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    var today = new Date();
+    var day = today.getDay();
+    var date = today.getFullYear() + "/" + (today.getMonth()+1) + "/" + today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+    if(today.getHours() >= 12){
+        session = "PM";
+    }else{
+        session = "AM";
+    }
+
+    document.getElementById("displayDate").innerHTML = daylist[day] + ", " + month[today.getMonth()] + " " + today.getDate();
+    document.getElementById("displayDateTime").innerHTML = date + " " + time + " " + session;
+}
+setInterval(displaytime, 10);
+</script>
+
+	
 
      
     <footer>
