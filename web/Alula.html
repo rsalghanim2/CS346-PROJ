@@ -1,4 +1,4 @@
-<!DOCTYPY html> 
+<!DOCTYPE html>
 <html lang="el">
 <head>
     <meta charset="UTF-8" />
@@ -7,13 +7,15 @@
     <title>ALULA</title>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
     <style>
         .begin {
             background-image: url(alulaF.jpg);
-            background-position:bottom;
+            background-position: bottom;
             background-size: cover;
             height: 100vh;
             width: 100vw;
@@ -25,12 +27,13 @@
 
         h2 {
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            color: burlywood;
+            color: rgb(59, 109, 71);
             -webkit-text-stroke: 1px black;
             text-align: center;
             font-size: 90px;
             text-shadow: 1px 1px 20px black;
         }
+
         .line {
             width: 150px;
             height: 4px;
@@ -38,8 +41,9 @@
             margin: 3px auto;
             border-radius: 5px;
         }
+
         h4 {
-            color: burlywood;
+            color: rgb(59, 109, 71);
             -webkit-text-stroke: 1px black;
             font-size: 25px;
             margin: 30px;
@@ -52,25 +56,27 @@
             align-items: center;
             gap: 2rem;
         }
-        .about img {
-            width: 550px;
-            height: auto;
-            border-radius: 20px;
-            box-shadow:10px 10px 30px black;
-            opacity:0.98;
-          
-        }
+
+            .about img {
+                width: 550px;
+                height: auto;
+                border-radius: 20px;
+                box-shadow: 10px 10px 30px black;
+            }
+
             .about p, h1 {
                 color: rgb(59, 109, 71);
                 text-align: center;
                 font-family: 'Poppins', sans-serif;
             }
+
             .about h1 {
                 font-size: 50px;
                 text-shadow: 1px 1px 2px black;
             }
-            .about p{
-                color:black;
+
+            .about p {
+                color: black;
             }
 
         .Events {
@@ -78,10 +84,16 @@
             width: 100%;
             margin: 50px auto;
         }
-        .col{
-            width:80%;
-            height:80%;
-            position:relative;
+
+        .highlight {
+            display: grid;
+            width: 100%;
+        }
+
+        .col {
+            width: 80%;
+            height: 80%;
+            position: relative;
         }
             .col input {
                 padding: 5px;
@@ -95,80 +107,253 @@
                 -webkit-transition: -webkit-transform,.3s,ease;
                 box-shadow: 2px 2px 10px black;
                 cursor: pointer;
-                font-weight:bolder;
-              
+                font-weight: bolder;
             }
+
                 .col input:hover {
                     -webkit-transform: scale(1.03);
                 }
-                .row .col img {
-                    width: 450px;
-                    height: 300px;
-                    border-radius: 10px;
-                    box-shadow: 5px 5px 20px black;
-                }
-        .row{
-            display:flex;
-            align-items:center;
-            width:100%;
-            justify-content:space-between;
+        .row .col img {
+            width: 450px;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px black;
         }
-        .row .col{
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            -webkit-transition:-webkit-transform,.3s,ease;
+
+        .row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
         }
+
+            .row .col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                -webkit-transition: -webkit-transform,.3s,ease;
+            }
+
         .Events .row {
             margin-top: 50px;
-            
+            cursor: pointer;
         }
+
         .Events h1 {
             color: rgb(59, 109, 71);
             font-size: 50px;
             text-shadow: 1px 1px 2px black;
             font-family: 'Poppins', sans-serif;
         }
+
         .Events h3 {
             font-size: 4vmin;
             color: rgb(59, 109, 71);
             margin: 20px auto;
             text-shadow: 1px 1px 1px black;
         }
-        .Events h5{
-            font-size:15px;
+
+        .Events h5 {
+            font-size: 15px;
         }
-       .Events p {
+
+        .Events p {
             font-family: 'Poppins', sans-serif;
             padding: 0px 40px;
             text-align: center;
-            font-size:15px;
-            position:relative;
+            font-size: 15px;
         }
+
+        .highlight h1 {
+            color: rgb(59, 109, 71);
+            font-size: 40px;
+            text-shadow: 1px 1px 2px black;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .highlight h3 {
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 5px #999;
+            text-align: left;
+        }
+
         .col:hover {
             -webkit-transform: scale(1.03);
         }
-        .col a {
-            color: black;
+
+        
+        .card {
+            width: 300px;
+            height: 250px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+        }
+
+        .card1 {
+            background-image: url("ALFA'S LOUNGE.jpg");
+        }
+
+        .card2 {
+            background-image: url(MAMZEL.jpg);
+        }
+
+        .card3 {
+            background-image: url(ACME1.jpg);
+        }
+
+        .card4 {
+            background-image: url("BEIT WAFA.jfif");
+        }
+
+        .card5 {
+            background-image: url(Circolo.jpg);
+        }
+
+        .card6 {
+            background-image: url(MYAZU.jpg)
+        }
+
+
+        .card11 {
+            background-image: url(CARAVAN.jpg);
+        }
+
+        .card12 {
+            background-image: url("HABITAS ALULA.jpg");
+        }
+
+        .card13 {
+            background-image: url("BANYAN TREE.jpg");
+        }
+
+        .card14 {
+            background-image: url(SAHARY.jpg);
+        }
+
+        .card15 {
+            background-image: url(GATHERN.jfif);
+        }
+
+        .card16 {
+            background-image: url(SELF.jfif);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card p {
+            text-shadow: 1px 1px 2px black;
+            font-size: 10px;
+            color: rgb(214, 204, 204);
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-pagination {
+            color: #000;
+        }
+
+        .gallery {
+            height: 80%;
+            width: 100%;
+            display: flex;
+            margin: 5% auto 0;
+            box-sizing: border-box;
+        }
+
+            .gallery h1 {
+                color: rgb(59, 109, 71);
+                font-size: 40px;
+                text-shadow: 1px 1px 2px black;
+                font-family: 'Poppins', sans-serif;
+            }
+
+        .img-box {
+            margin: 0 1%;
+            flex-grow: 1;
+            flex-basis: 0;
+            transition: .5s;
+        }
+
+            .img-box img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: .5s;
+            }
+
+            .img-box:hover {
+                flex-basis: 50%;
+            }
+
+        .active {
+            flex-basis: 50%;
+        }
+
+        .gallery:hover .active {
+            flex-basis: 0;
+        }
+
+        .img-box:nth-child(1):hover {
+            flex-basis: 30%;
+        }
+
+        .img-box h3 {
+            position: relative;
+            color: rgb(59, 109, 71);
+            font-size: 15px;
+        }
+        .swiper-slide a {
+            color: white;
             text-decoration: none;
-            font-size:20px;
-            text-shadow: 1px 1px 0.5px black;
+            font-size: 12px;
+            text-shadow: 1px 1px 1px black;
+            position:relative;
+            top:110px;
+            left:auto;
         }
-        .col a:hover{
-            text-decoration:underline;
-            
-        }
-       
+
+        .swiper-slide a:hover {
+                text-decoration: underline;
+            }
+
         .end {
             width: 100%;
             height: 45%;
             background-color: #569f67;
         }
+
             .end h1 {
-               
                 color: #1f3a24;
                 text-shadow: 0.5px 0.5px 0.5px black;
-
             }
 
         .social a {
@@ -187,13 +372,11 @@
             -webkit-transition: -webkit-transform,.3s,ease;
             position: relative;
             left: 38%;
-            
-           
         }
+
             .social a:hover {
                 -webkit-transform: scale(1.1);
             }
-
     </style>
     <!-- -->
 </head>
@@ -272,105 +455,218 @@
         </div>
     </section>
 
-    <!--hotels -->
-    <section class="Events" id="Hotels">
-        <h1>Hotels</h1>
+    <!-- Rustrants & Cafes -->
+
+    <section class="highlight">
+        <h1 id="Restaurants">Rustrants & Cafes</h1>
         <div class="line"></div>
 
-        <div class="row">
-            <div class="col">
-                <img src="CARAVAN.jpg" />
-                <h3>CARAVAN BY HABITAS</h3>
-                <p>
-                    In the spirit of wandering, Caravan by Habitas homes are made up of Airstreams and gathering spaces, echoing the lifestyle of the ancient Bedouins who once travelled the arid lands of the Arabian Peninsula in caravans.
-                </p>
-                <br />
-                <a href="https://www.google.com/maps/place/Habitas+Caravan/@26.7558574,37.8749437,17z/data=!4m5!3m4!1s0x15a5b104a0c2a657:0x70b04702112cb6ad!8m2!3d26.7558574!4d37.8771324?shorturl=1"class="location">LOCATION></a>
-                <input type="button" value="Book now!" />
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card card1">
+                            <h3>ALFA'S LOUNGE</h3>
+                            <p>
+                                Tucked away in a beautiful canyon is a new hip hangout - Alfa’s Lounge. At this must-visit spot, you can enjoy a coffee or have dinner under the stars, surrounded by some of the most breathtaking scenery AlUla has to offer. Open daily from 6:00 pm – 1:00 am
+                            </p>
 
+                            <a href="https://www.google.com/maps/place/26%C2%B040'17.7%22N+37%C2%B056'16.9%22E/@26.6715737,37.9030057,13z/data=!4m5!3m4!1s0x0:0x4c73f3ddab76d221!8m2!3d26.6715737!4d37.9380246?hl=en-SA&shorturl=11" class="location">LOCATION></a>
+                        </div>
+                    </div>
+                <div class="swiper-slide">
+                    <div class="card card2">
+                        <h3>MAMZEL</h3>
+                        <p>From Marbella to the hidden canyons of AlUla, MAMZEL shares the vibrant atmosphere of Spain with all who visit this secret hideout. With an inspired international menu and live entertainment, MAMZEL is the ultimate place to visit for dinner.</p>
+                        <br />
+                        <a href="https://www.google.com/maps/place/26%C2%B039'45.8%22N+37%C2%B056'51.9%22E/@26.662726,37.947759,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x55e55874979f09f5!8m2!3d26.662726!4d37.947759" class="location">LOCATION></a>
+                      
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card3">
+                        <h3>ACME</h3>
+                        <p>ACME’s unique burgers and delicious bites bring fun new flavours to AlUla’s Old Town. From refreshing drinks to savoury snacks, an exciting menu awaits kids and adults alike</p>
+                        <br />
+                        
+                        <a href="https://www.google.com/maps?q=ACME+AlUla+-+%D8%A7%D9%83%D9%85%D9%8A+%D8%A7%D9%84%D8%B9%D9%84%D8%A7,+AlUla+43562&ftid=0x15a5ab029fc42d75:0xf84f1365e372df1&hl=en-US&gl=us&entry=gps&lucs=s2se&shorturl=1" class="location">LOCATION></a>
+                      
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card4">
+                        <h3>BEIT WAFA </h3>
+                        <p>Nestled among the mountains at 26 North, a glamorous camping retreat and hidden sanctuary in AlUla, Beit Wafa features a fresh, farm-to-table menu sourced from the surrounding estate and views you have to see to believe.</p>
+                        <br />
+                        <a href="https://www.google.com/maps/place/Beit+Wafa/@26.6911914,37.9124588,17z/data=!3m1!4b1!4m5!3m4!1s0x15a5adbf358031ef:0x37cef30fe45ff376!8m2!3d26.6911914!4d37.9146475?shorturl=1" class="location">LOCATION></a>
+                       
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card5">
+                        <h3>CIRCOLO</h3>
+                        <p>With a casual, rustic setting, Circolo's authentic Italian dishes use only premium ingredients to create the flavours that will have you coming back time and again. Don't miss the artisanal pizzas fresh from the wood-fired oven.</p>
+                        <br />
+                        <a href="https://www.google.com/maps/place/26%C2%B037'51.8%22N+37%C2%B054'48.3%22E/@26.6310452,37.9112203,17z/data=!3m1!4b1!4m4!3m3!8m2!3d26.6310452!4d37.913409?hl=en-US" class="location">LOCATION></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card6">
+                        <h3>MYAZU</h3>
+                        <p>Experience Japanese fine dining in a chic atmosphere through exquisite culinary compositions crafted to create a harmonious balance between smoky, sweet, spicy and vibrant flavours.</p>
+                        <br />
+                        <a href="https://www.google.com/maps/place//@26.6588201,37.9628264,17z/data=!3m1!4b1" class="location">LOCATION></a>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <img src="HABITAS ALULA.jpg" />
-                <h3>HABITAS ALULA</h3>
-                <p>The serene resort pathways lead guests up to each of the 96 guest rooms, which span three tiers: premium Celestial Rooms, Alcove Rooms and Canyon Rooms, as well as to the yoga deck, wellness and fitness centres, restaurant, and swimming pool.</p>
-                <br />
-                <a href="https://www.google.com/maps/place/%D9%85%D9%86%D8%AA%D8%AC%D8%B9+%D9%87%D8%A7%D8%A8%D9%8A%D8%AA%D8%A7%D8%B3+%D8%A7%D9%84%D8%B9%D9%84%D8%A7+%7C+Habitas+AlUla%E2%80%AD/@26.762072,37.859161,15z/data=!4m5!3m4!1s0x0:0x4aefec7260feae23!8m2!3d26.762072!4d37.859161?shorturl=1" class="location">LOCATION></a>
-                <input type="button" value="Book now!" />
-
-            </div>
+            <br> <br>
+            <div class="swiper-pagination"></div>
         </div>
 
-        <div class="row">
-            <div class="col">
-                <img src="BANYAN TREE.jpg" style="height:430px" />
-                <h3>BANYAN TREE ALULA</h3>
-                <p>Within this enchanting space, guests can enjoy breathtaking views of the Ashar Valley from the privacy of one of 47 elegant tented villas,all lavishly decorated with authentic, handcrafted Arabian-inspired details. </p>
-                <br />
-                <a class="location">LOCATION></a>
-              
-                <input type="button" value="Book now!"style="height:30px" />
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                slidesPerGroup: 3,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+    </section>
+
+    <!-- Hotels -->
+    <section class="highlight">
+        <h1 id="Hotels">Hotels</h1>
+        <div class="line"></div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="card card11">
+                        <h3>CARAVAN BY HABITAS</h3>
+                        <p>
+                            In the spirit of wandering, Caravan by Habitas homes are made up of Airstreams and gathering spaces, echoing the lifestyle of the ancient Bedouins who once travelled the arid lands of the Arabian Peninsula in caravans.
+                        </p>
+                        <br />
+                        <a href="https://www.google.com/maps/place/Habitas+Caravan/@26.7558574,37.8749437,17z/data=!4m5!3m4!1s0x15a5b104a0c2a657:0x70b04702112cb6ad!8m2!3d26.7558574!4d37.8771324?shorturl=1" class="location">LOCATION></a>
+                      
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card12">
+                        <h3>HABITAS ALULA</h3>
+                        <p>The serene resort pathways lead guests up to each of the 96 guest rooms, which span three tiers: premium Celestial Rooms, Alcove Rooms and Canyon Rooms, as well as to the yoga deck, wellness and fitness centres, restaurant, and swimming pool.</p>
+                       
+                        <a href="https://www.google.com/maps/place/%D9%85%D9%86%D8%AA%D8%AC%D8%B9+%D9%87%D8%A7%D8%A8%D9%8A%D8%AA%D8%A7%D8%B3+%D8%A7%D9%84%D8%B9%D9%84%D8%A7+%7C+Habitas+AlUla%E2%80%AD/@26.762072,37.859161,15z/data=!4m5!3m4!1s0x0:0x4aefec7260feae23!8m2!3d26.762072!4d37.859161?shorturl=1" class="location">LOCATION></a>
+                       
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card13">
+                        <h3>BANYAN TREE ALULA</h3>
+                        <p>Within this enchanting space, guests can enjoy breathtaking views of the Ashar Valley from the privacy of one of 47 elegant tented villas,all lavishly decorated with authentic, handcrafted Arabian-inspired details. </p>
+                        <br />
+                        <a class="location">LOCATION></a>
+
+                       
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card14">
+                        <h3>SAHARY ALULA RESORT</h3>
+                        <p>There are 80 spacious rooms and suites. Each is elegantly decorated and comes with its own private bathroom and terrace.</p>
+                        <br />
+                        <a class="location">LOCATION></a>
+                     
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card15">
+                        <h3>GATHERN ACCOMODATIONS</h3>
+                        <p>Long-term or short-term rentals are available for you and your families to travel to this magical destination where heritage and beauty surround you.</p>
+                        <a class="location">LOCATION></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card16">
+                        <h3>SELF-CAMPING</h3>
+                        <p>Bring your camping gear, enjoy adventures off the beaten path, and explore AlUla's majestic canyons and sandstone mountains.</p>
+                        <br />
+                        <br />
+                        <a class="location">LOCATION></a>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="col">
-                <img src="SAHARY.jpg" />
-                <h3>SAHARY ALULA RESORT</h3>
-                <p>There are 80 spacious rooms and suites. Each is elegantly decorated and comes with its own private bathroom and terrace.</p>
-                <br />
-                <a class="location">LOCATION></a>
-                <input type="button" value="Book now!" style="height:30px" />
+            <br> <br>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                slidesPerGroup: 3,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+    </section>
+
+    <section class="highlight">
+        <h1>HIGHLIGHT</h1>
+        <div class="line"></div>
+
+        <div class="gallery">
+            <div class="img-box active">
+                <img src="seas.jpeg">
+                <h3>Riyadh Season</h3>
+            </div>
+            <div class="img-box">
+                <img src="Jedd.jpeg">
+                <h3>Jeddah Season</h3>
+            </div>
+            <div class="img-box">
+                <img src="Diriy.jpeg">
+                <h3>Diriyah Season</h3>
+            </div>
+            <div class="img-box">
+                <img src="alula.jpeg">
+                <h3>Alula Season</h3>
+            </div>
+            <div class="img-box">
+                <a><img src="abhahi.jpeg"></a>
+                <h3>Abha Season</h3>
             </div>
         </div>
     </section>
 
-    <!-- Restaurants -->
 
-    <section class="Events" id="Restaurants">
-        <h1>Restaurants</h1>
-        <div class="line"></div>
-
-        <div class="row">
-            <div class="col">
-                <img src="ALFA'S LOUNGE.jpg"style="height:400px" />
-                <h3>ALFA'S LOUNGE</h3>
-                <p>
-                    Tucked away in a beautiful canyon is a new hip hangout - Alfa’s Lounge. At this must-visit spot, you can enjoy a coffee or have dinner under the stars, surrounded by some of the most breathtaking scenery AlUla has to offer. Open daily from 6:00 pm – 1:00 am
-                </p>
-                <br />
-                <a href="https://www.google.com/maps/place/26%C2%B040'17.7%22N+37%C2%B056'16.9%22E/@26.6715737,37.9030057,13z/data=!4m5!3m4!1s0x0:0x4c73f3ddab76d221!8m2!3d26.6715737!4d37.9380246?hl=en-SA&shorturl=11"class="location">LOCATION></a>
-                <input type="button" value="Book now!"style="height:30px"/>
-
-            </div>
-            <div class="col">
-                <img src="MAMZEL.jpg"style="height:300px" />
-                <h3>MAMZEL</h3>
-                <p>From Marbella to the hidden canyons of AlUla, MAMZEL shares the vibrant atmosphere of Spain with all who visit this secret hideout. With an inspired international menu and live entertainment, MAMZEL is the ultimate place to visit for dinner.</p>
-                <br />
-                <a href="https://www.google.com/maps/place/26%C2%B039'45.8%22N+37%C2%B056'51.9%22E/@26.662726,37.947759,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x55e55874979f09f5!8m2!3d26.662726!4d37.947759" class="location">LOCATION></a>
-                <input type="button" value="Book now!"style="height:30px"/>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <img src="ACME1.jpg"/>
-                <h3>ACME</h3>
-                <p>ACME’s unique burgers and delicious bites bring fun new flavours to AlUla’s Old Town. From refreshing drinks to savoury snacks, an exciting menu awaits kids and adults alike</p>
-                <br />
-                <a href="https://www.google.com/maps?q=ACME+AlUla+-+%D8%A7%D9%83%D9%85%D9%8A+%D8%A7%D9%84%D8%B9%D9%84%D8%A7,+AlUla+43562&ftid=0x15a5ab029fc42d75:0xf84f1365e372df1&hl=en-US&gl=us&entry=gps&lucs=s2se&shorturl=1"class="location">LOCATION></a>
-              
-                <input type="button" value="Book now!" />
-            </div>
-
-            <div class="col">
-                <img src="BEIT WAFA.jfif"/>
-                <h3>BEIT WAFA </h3>
-                <p>Nestled among the mountains at 26 North, a glamorous camping retreat and hidden sanctuary in AlUla, Beit Wafa features a fresh, farm-to-table menu sourced from the surrounding estate and views you have to see to believe.</p>
-                <br />
-                <a href="https://www.google.com/maps/place/Beit+Wafa/@26.6911914,37.9124588,17z/data=!3m1!4b1!4m5!3m4!1s0x15a5adbf358031ef:0x37cef30fe45ff376!8m2!3d26.6911914!4d37.9146475?shorturl=1"class="location">LOCATION></a>
-                <input type="button" value="Book now!"/>
-            </div>
-        </div>
-    </section>
 
     <footer>
         <section class="end">
