@@ -381,6 +381,9 @@
             .social a:hover {
                 -webkit-transform: scale(1.1);
             }
+        
+      
+
     </style>
 
 </head>
@@ -396,10 +399,11 @@
     </header>
     <section class="begin">
         <div>
-            <h2>ALula</h2>
+            <h2 class="haed">ALula</h2>
             <div class="line"></div>
-            <h4><strong>This magical place holds secrets to be discovered</strong></h4>
+            <h4 class="haed"><strong>This magical place holds secrets to be discovered</strong></h4>
         </div>
+    
     </section>
 
     <section class="about">
@@ -679,6 +683,20 @@
         </div>
     </section>
 
+
+
+    <!---->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            distance: '60px',
+            duration: 2500,
+            reset: true
+        });
+        sr.reveal('.haed', { dalay: 200, origin: 'top' });
+        sr.reveal('.about-img', { dalay: 1000, origin: 'left' });
+        sr.reveal('.about-text', { dalay: 1000, origin: 'right' });
+    </script>
 
 
 
