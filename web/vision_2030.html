@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<!-- Coding by CodingLab || www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Vision of the Kingdom of Saudi Arabia 2030</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        .mainHeader {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(guinnesBackground.webp) no-repeat;
+            background-size: 600px;
+            /* background-position: right center; */
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 80px;
+            margin-left: 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline;
+            margin-left: 40px;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: rgb(251, 218, 175);
+                font-size: 20px;
+            }
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            display: flex;
+        }
+
+        .title {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            color: #3a6c42;
+            font-size: 2.2em;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .container::-webkit-scrollbar {
+            height: 30px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 25px;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background: #5eb8c6;
+            border-radius: 25px;
+        }
+
+            .container::-webkit-scrollbar-thumb:hover {
+                background: #7c88a8;
+            }
+
+        .container {
+            display: flex;
+            gap: 12px;
+            max-width: 100%;
+            width: 100%;
+            /* background: #e4e3d9; */
+            border-radius: 12px;
+            padding: 30px;
+            /* margin-left: 30%; */
+            /* scroll-snap-type: x mandatory; */
+            overflow-x: scroll;
+            scroll-padding: 30px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            background: #eee;
+        }
+
+            .container .card {
+                display: flex;
+                flex: 0 0 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                border-radius: 12px;
+                background: rgb(252, 248, 248);
+                scroll-snap-align: start;
+                box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            }
+
+            .container p {
+                line-height: 1.7rem;
+            }
+
+        .card .image {
+            height: 250px;
+            width: 250px;
+            padding: 4px;
+            /* background: #4070f4; */
+            border-radius: 20px;
+        }
+
+        .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 5px solid #fff;
+            position:center;
+        }
+
+        .card h2 {
+            margin-top: 25px;
+            color: #333;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .card p {
+            margin-top: 4px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #333;
+            text-align: center;
+        }
+
+        .date {
+            padding-top: 2rem;
+            font-size: 0.9rem;
+            color: green;
+        }
+
+        .text {
+            /* color:var(--light-color); */
+            font-size: 1.6rem;
+            line-height: 1.7;
+            padding: 1rem 0;
+        }
+
+        .container .links {
+            border-top: solid rgba(0, 0, 0, 0.129);
+            margin-top: 5.5rem;
+            padding-top: 2.5rem;
+            display: flex;
+            align-items: center;
+       
+        }
+
+
+
+            .container .links a {
+                font-size: 1rem;
+                color: green;
+            }
+
+                .container .links a i {
+                    padding-right: .2rem;
+                    color: green;
+                }
+
+                .container .links a:hover {
+                    color: blue;
+                }
+
+                    .container .links a:hover i {
+                        color: red;
+                    }
+
+        a {
+            text-decoration: none;
+        }
+
+        #title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        #arrow-title {
+            padding-top: 70px;
+        }
+
+        #arrow {
+            padding-top: 10px;
+            font-size: 60px;
+            position: absolute;
+        }
+
+
+        @media(min-aspect-ratio:16/9) {
+            .video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media(max-aspect-ratio:16/9) {
+            .video {
+                width: auto;
+                height: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <!--           header            -->
+    <div class="mainHeader">
+        <video autoplay loop muted plays-inline class="video">
+            <source src="VISION" type="video/mp4">
+        </video>
+        <nav>
+            <img src="logo.jfif" alt="logo" class="logo">
+            <ul>
+                <li><a href="#Cities">Cities</a></li>
+                <li><a href="#Country">Country profile</a></li>
+                <li><a href="#learnMore">Learn More</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </nav>
+        <div class="contentA">
+            <h1>Vision of the Kingdom of Saudi Arabia 2030</h1>
+        </div>
+    </div>
+    <br>
+    <!--                Section                 -->
+    <div>
+        <h2 class="title">Saudi Arabia competes with the countries of the world in the field of construction and reconstruction</h2>
+    </div>
+    <section class="container">
+        <div class="card">
+            <div class="image">
+                <img class="noor-img" src="vision.jfif" />
+            </div>
+            <h2 id="title">Vision of the Kingdom of Saudi Arabia 2030</h2>
+            <p class="text">
+                The countries of the world are competing in the field of construction and reconstruction and are trying and trying hard to achieve progress and prosperity in all fields and comprehensive and sustainable development,
+                and to give its readers a measure of safety and reassurance while providing the best levels of comfort, luxury and a decent life. The carton, Saudi Arabia is one of these countries, it seeks with all access To achieve the best results in various fields.
+               For more details <a href="https://www.vision2030.gov.sa/" target="_blank">CLICKING HERE.</a>
+            </p>
+            <br>
+            <h3 id="arrow-title">YOU CAN SCROLL RIGHT TO SEE MORE</h3>
+            <!-- <div >
+              <i id="arrow" class="fa fa-arrow-right"></i>
+            </div> -->
+        </div>
+        <div class="card">
+            <div class="image">
+                <img class="noor-img" src="NEOM.jfif" />
+            </div>
+            <div class="date">
+                <i class="far fa-calendar"></i>
+                <span>Expires in 2025</span>
+            </div>
+            <h2>Neom city</h2>
+            <p class="text">
+                NEOM is the first private area in the world which  extends over three countries . In fact , it is built  to become  a vibrant new destination , because it is located in the northwestern region of the Kingdom of Saudi Arabia. It is expected to appear as  a leading global center .As, It represents the future of human civilization by offering a new lifestyle to its inhabitants along with advanced economic horizons.
+            </p>
+            <div class="links">
+                <a href="#" class="user">
+                    <i class="fa fa-map-pin"></i>
+                    <span>Tabuk</span>
+                </a>
+            </div>
+        </div>
+        <!-- End     -->
+        <div class="card">
+            <div class="image">
+                <img class="outlet-img" src="Qiddiya.png" />
+            </div>
+            <div class="date">
+                <i class="far fa-calendar"></i>
+                <span>Expires in 2023</span>
+            </div>
+            <h2>Qiddiya</h2>
+            <p class="text">
+                Qiddiya will be a global destination as home to the most innovative, exciting and diverse experiences in entertainment, sports and the arts. Visitors will be able to enjoy a variety of distinctive activities and services through five main pillars: sports and health, nature and the environment, parks and entertainment destinations, movement and thrill, and arts and culture, which makes Qiddiya the capital of entertainment, sports and arts, not only for the Kingdom of Saudi Arabia, but for the whole world.
+            </p>
+            <div class="links">
+                
+                <a href="#" class="user">
+                    <i class="fa fa-map-pin"></i>
+                    <span>367km2 site sits on the doorstep of Riyadh</span>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img class="dome-img" src="TheLine.jpg" />
+            </div>
+            <div class="date">
+                <i class="far fa-calendar"></i>
+                <span>Expires in 2023</span>
+            </div>
+            <h2>The line</h2>
+            <p class="text">
+                The Line project is a revolution in urban life, placing people at the top of their priorities by giving them an unprecedented urban living experience while preserving the surrounding nature. The Line will redefine the concept of urban development and what cities should look like in the future.
+            </p>
+            <div class="links">
+           
+                <a href="#" class="user">
+                    <i class="fa fa-map-pin"></i>
+                    <span>NEOM</span>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img class="mirror-img" src="KingSalman.jpg" />
+            </div>
+            <div class="date">
+                <i class="far fa-calendar"></i>
+                <span>Expires in 2027</span>
+            </div>
+            <h2>King Salman Park</h2>
+            <p class="text">
+                King Salman Park is built on an area of more than 16 square kilometers to become the largest city parks in the world and offers a wide range of quality options and activities for the city’s residents and visitors, as it includes extended green areas and more than a million trees, and open spaces of more than 11.6 square kilometers, in addition to The Royal Complex of Arts, the National Theater, a 7.2-kilometer circular pedestrian path, the “Wadi” area in the middle of the park, and a group of water elements, monuments, and artistic icons.
+            </p>
+            <div class="links">
+             
+                <a href="#" class="user">
+                    <i class="fa fa-map-pin"></i>
+                    <span>RIYADH</span>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img class="parks-img" src="GREEN.png" />
+            </div>
+            <div class="date">
+                <i class="far fa-calendar"></i>
+                <span>Expires in 2030</span>
+            </div>
+            <h2>The Green Riyadh</h2>
+            <p class="text">The Green Riyadh project is one of the most important environmental projects, as it is one of the largest and most ambitious afforestation projects in the world, and one of the four major Riyadh projects, within the framework of achieving one of the goals of the Saudi Vision 2030 to raise the classification of the city of Riyadh among its counterparts in the cities of the world.
+            </p>
+            <div class="links">
+             
+                <a href="#" class="user">
+                    <i class="fa fa-map-pin"></i>
+                    <span>RIYADH</span>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="AMAALA.jfif" class="hospital-img">
+            </div>
+            <div class="date">
+                <i class="far fa-calendar"></i>
+                <span>Expires in 2028</span>
+            </div>
+            <h2>AMAALA</h2>
+            <p class="text">
+                AMAALA is an upscale, ultra-luxury travel destination designed to highlight the richness of natural resources in the Kingdom of Saudi Arabia. The Amaala project is being developed within the Red Sea International Company, which is owned by the Public Investment Fund.
+            </p>
+            <div class="links">
+                <a href="#" class="user">
+                    <i class="fa fa-map-pin"></i>
+                    <span>northwest of Saudi Arabia</span>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img class="ABRAJ-img" src="spark.png" />
+            </div>
+            <div class="date">
+                <i class="far fa-calendar"></i>
+                <span>Expires in 2028</span>
+            </div>
+            <h2>King Salman Energy City (SPARK)</h2>
+            <p class="text"> King Salman Energy City (SPARK) is an integrated industrial city, extending over an area of 50 square kilometers. clean, sustainable and diversified revenues.</p>
+            <div class="links">
+                <a href="#" class="user">
+                    <i class="fa fa-map-pin"></i>
+                    <span>Dhahran</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
