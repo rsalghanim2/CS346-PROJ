@@ -13,8 +13,151 @@
     <link rel="stylesheet" href="style.css" />
 
     <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.551);
+            /* box-shadow: var(--box-shadow); */
+            display: flex;
+            align-items: center;
+            padding: 20px 3%;
+            /* justify-content: space-between; */
+        }
+
+            .header .logo {
+                margin-right: auto;
+            }
+
+            .header .navbar a {
+                color: var(--light-color);
+                margin-right: 2rem;
+                font-size: 20px;
+                text-transform: capitalize;
+                text-decoration: none;
+            }
+
+                .header .navbar a:hover {
+                    color: green;
+                    background-color: #569f67;
+                    border-radius: 20px;
+                }
+
+            .header .icons i {
+                height: 3rem;
+                line-height: 3rem;
+                width: 3rem;
+                text-align: center;
+                color: var(--black);
+                background: #eee;
+                border-radius: 50%;
+                margin-left: .7rem;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+                .header .icons i:hover {
+                    color: rgb(176, 19, 19);
+                }
+
+            .header .search-form {
+                position: absolute;
+                background: #fff;
+                border-radius: .5rem;
+                display: flex;
+                align-items: center;
+                top: 110%;
+                right: 7%;
+                height: 4rem;
+                width: 30rem;
+                padding: 1rem;
+                display: none;
+            }
+
+                .header .search-form.active {
+                    display: flex;
+                }
+
+                .header .search-form #search-box {
+                    width: 80%;
+                    border: var(--border);
+                    border-radius: .5rem;
+                    padding: 1rem;
+                    font-size: 1.7rem;
+                    height: 80%;
+                }
+
+                .header .search-form label {
+                    font-size: 2rem;
+                    padding-left: 1rem;
+                    padding-right: .5rem;
+                    cursor: pointer;
+                }
+
+                    .header .search-form label:hover {
+                        color: red;
+                    }
+
+        #menu-bars {
+            display: none;
+        }
+
+        @media (max-width:991px) {
+
+
+            .header {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width:768px) {
+
+            #menu-bars {
+                display: inline-block;
+            }
+
+            .header .search-form {
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .header .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                display: none;
+            }
+
+                .header .navbar.active {
+                    display: block;
+                }
+
+                .header .navbar a {
+                    display: block;
+                    background: #f7f7f7;
+                    padding: 1.5rem;
+                    margin: 1.5rem;
+                    border-radius: .5rem;
+                    /* border:var(--border); */
+                }
+        }
         .begin {
-            background-image: url(alulaF.jpg);
+            background-image: url(alulaH.jpeg);
             background-position: bottom;
             background-size: cover;
             height: 100vh;
@@ -27,7 +170,7 @@
 
         h2 {
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            color: rgb(59, 109, 71);
+            color:burlywood;
             -webkit-text-stroke: 1px black;
             text-align: center;
             font-size: 90px;
@@ -43,7 +186,7 @@
         }
 
         h4 {
-            color: rgb(59, 109, 71);
+            color: bisque;
             -webkit-text-stroke: 1px black;
             font-size: 25px;
             margin: 30px;
@@ -348,64 +491,241 @@
             .swiper-slide a:hover {
                 text-decoration: underline;
             }
-
-        .end {
-            width: 100%;
-            height: 45%;
-            background-color: #569f67;
-        }
-
-            .end h1 {
-                color: #1f3a24;
-                text-shadow: 0.5px 0.5px 0.5px black;
-            }
-
-        .social a {
-            display: inline-block;
-            height: 40px;
-            width: 50px;
-            padding: 10px;
-            background-color: rgb(59, 109, 71);
-            box-shadow: 2px 2px 3px black;
-            opacity: 0.9;
-            margin-right: 10px;
+            /*time*/
+        .clockbox1 {
             text-align: center;
-            line-height: 10px;
-            border-radius: 50%;
-            color: black;
-            -webkit-transition: -webkit-transform,.3s,ease;
-            position: relative;
-            left: 38%;
+            font-size: 10px;
+            align-items: center;
+            color: papayawhip;
+            text-shadow: 2px 2px 3px black;
+        }
+        /* new foter*/
+        footer {
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background: #111;
         }
 
-            .social a:hover {
-                -webkit-transform: scale(1.1);
+            footer .content {
+                max-width: 1350px;
+                margin: auto;
+                padding: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
             }
-        
-      
 
+                footer .content p, a {
+                    color: #fff;
+                }
+
+                footer .content .box {
+                    width: 33%;
+                    transition: all 0.4s ease;
+                }
+
+                footer .content .topic {
+                    font-size: 22px;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 16px;
+                }
+
+                footer .content p {
+                    text-align: justify;
+                }
+
+                footer .content .lower .topic {
+                    margin: 24px 0 5px 0;
+                }
+
+                footer .content .lower i {
+                    padding-right: 16px;
+                }
+
+                footer .content .middle {
+                    padding-left: 80px;
+                }
+
+                    footer .content .middle a {
+                        line-height: 32px;
+                    }
+
+                footer .content .right input[type="text"] {
+                    height: 45px;
+                    width: 100%;
+                    outline: none;
+                    color: #d9d9d9;
+                    background: #000;
+                    border-radius: 5px;
+                    padding-left: 10px;
+                    font-size: 17px;
+                    border: 2px solid #222222;
+                }
+
+                footer .content .right input[type="submit"] {
+                    height: 42px;
+                    width: 100%;
+                    font-size: 18px;
+                    color: #d9d9d9;
+                    background: #eb2f06;
+                    outline: none;
+                    border-radius: 5px;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    margin-top: 12px;
+                    border: 2px solid #eb2f06;
+                    transition: all 0.3s ease-in-out;
+                }
+
+        .content .right input[type="submit"]:hover {
+            background: none;
+            color: #eb2f06;
+        }
+
+        footer .content .media-icons a {
+            font-size: 16px;
+            height: 45px;
+            width: 45px;
+            display: inline-block;
+            text-align: center;
+            line-height: 43px;
+            border-radius: 5px;
+            border: 2px solid #222222;
+            margin: 30px 5px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .content .media-icons a:hover {
+            border-color: #eb2f06;
+        }
+
+        label {
+            color: #d9d9d9;
+        }
+
+        footer .bottom {
+            width: 100%;
+            text-align: left;
+            margin-left: 10px;
+            color: #d9d9d9;
+            padding: 0 40px 5px 0;
+        }
+
+            footer .bottom a {
+                color: #eb2f06;
+            }
+
+        footer a {
+            transition: all 0.3s ease;
+        }
+
+            footer a:hover {
+                color: #eb2f06;
+            }
+
+        @media (max-width:1100px) {
+            footer .content .middle {
+                padding-left: 50px;
+            }
+        }
+
+        @media (max-width:950px) {
+            footer .content .box {
+                width: 50%;
+            }
+
+            .content .right {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width:560px) {
+            footer {
+                position: relative;
+            }
+
+                footer .content .box {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+
+                footer .content .middle {
+                    padding-left: 0;
+                }
+        }
+   
     </style>
 
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">ALULA</a>
-        <nav class="navigation">
-            <a href="#Events">Events</a>
-            <a href="#Hotels">Hotels</a>
-            <a href="#Restaurants">Restaurants </a>
-            <a href="index.html">Home</a>
-        </nav>
-    </header>
-    <section class="begin">
-        <div>
-            <h2 class="haed">ALula</h2>
-            <div class="line"></div>
-            <h4 class="haed"><strong>This magical place holds secrets to be discovered</strong></h4>
-        </div>
-    
-    </section>
+    <!--           header          -->
+    <header class="header">
 
+        <a href="#" class="logo"><img src="logo.jfif" alt="logo" width="50px"></a>
+
+        <nav class="navbar">
+            <a href="#Events">Events</a>
+            <a href="#Restaurants">Restaurants </a>
+            <a href="#Hotels">Hotels</a>
+            <a href="index.html">Home</a>
+            <a href="Registration.html">Sign in</a>
+            <a href="Registration.html">Sign up</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+    </header>
+    <!--            javascript            -->
+    <script>
+        let menu = document.querySelector('#menu-bars');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+            searchIcon.classList.remove('fa-times');
+            searchForm.classList.remove('active');
+        }
+
+        let searchIcon = document.querySelector('#search-icon');
+        let searchForm = document.querySelector('.search-form');
+
+        searchIcon.onclick = () => {
+            searchIcon.classList.toggle('fa-times');
+            searchForm.classList.toggle('active');
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+            searchIcon.classList.remove('fa-times');
+            searchForm.classList.remove('active');
+        }
+    </script>
+
+    <div>
+        <section class="begin">
+            <div class="clockbox1">
+                <h2>ALula</h2>
+                <div class="line"></div>
+                <h4><strong>This magical place holds secrets to be discovered</strong></h4>
+                <!--time-->
+                <h3 id="displayDate"> </h3>
+                <h3 id="displayDateTime"></h3>
+            </div>
+        </section>
+    </div>
     <section class="about">
         <img src="ALULaf2.jpg" class="about-img" />
         <div class="about-text">
@@ -431,7 +751,6 @@
                 <p>
                     Maraya is a stunning piece of art set in the desert canyon of Ashar Valley. Designed to blend into the surrounding landscape, it rises from the sand like a mirage. The state-of-the-art structure is covered in 9,740 mirrored panels reflecting AlUla's beauty, making it the largest mirrored building in the world, according to Guinness World Records
                 </p>
-                <p> it was also designed as a fully functioning multi-purpose venue.</p>
                 <a href="https://www.experiencealula.com/ar/business-special-events/maraya">
                     <input type="button" value="Learn more" />
                 </a>
@@ -685,35 +1004,85 @@
 
 
 
-    <!---->
+    <!--ScrollReveal library-->
     <script src="https://unpkg.com/scrollreveal"></script>
+
     <script>
         const sr = ScrollReveal({
             distance: '60px',
             duration: 2500,
             reset: true
         });
-        sr.reveal('.haed', { dalay: 200, origin: 'top' });
+
         sr.reveal('.about-img', { dalay: 1000, origin: 'left' });
         sr.reveal('.about-text', { dalay: 1000, origin: 'right' });
     </script>
+    <!--clocl script-->
+    <script>
+        function displaytime() {
+            var session = "";
+            var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+            var today = new Date();
+            var day = today.getDay();
+            var date = today.getFullYear() + "/" + (today.getMonth() + 1) + "/" + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
+            if (today.getHours() >= 12) {
+                session = "PM";
+            } else {
+                session = "AM";
+            }
+
+            document.getElementById("displayDate").innerHTML = daylist[day] + ", " + month[today.getMonth()] + " " + today.getDate();
+            document.getElementById("displayDateTime").innerHTML = date + " " + time + " " + session;
+        }
+        setInterval(displaytime, 10);
+    </script>
 
     <footer>
-        <section class="end">
-            <h1>CONNECT WITH US</h1>
-            <br />
-            <br />
-            <div class="social">
-
-                <a href="https://www.facebook.com/ExperienceAlUla/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/ExperienceAlUla"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/experiencealula/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@experiencealula"><i class="fab fa-tiktok"></i></a>
+        <div class="content">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic"> About our website</div>
+                    <label>
+                        To discovre more about Saudi Arabia and its activities ,cities, regions, pleces and more entertainment options
+                    </label>
+                </div>
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>8002444010</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>explore.saudi11@gmail.com</a>
+                    </div>
+                </div>
             </div>
-        </section>
-    </footer>
+            <div class="middle box">
+                <div class="topic">Quick links</div>
+                <div><a href="#">Home page</a></div>
+                <div><a href="#">contact us</a></div>
+                <div><a href="#">about us</a></div>
 
+            </div>
+            <div class="right box">
+                <div class="topic">Find us</div>
+                <form action="#">
+                    <p>our social media</p>
+                    <div class="media-icons">
+                        <a href="https://www.facebook.com/ExperienceAlUla/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/experiencealula/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/ExperienceAlUla"><i class="fab fa-twitter"></i></a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bottom">
+            <p> Copyright © 2023 <a href="#">Saudi Tourism Authority</a> All rights reserved</p>
+        </div>
+    </footer>
 </body>
 </html>
