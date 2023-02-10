@@ -10,9 +10,150 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="style.css" />
-
        <style>
+            * {
+            font-family: "Gill Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.551);
+            /* box-shadow: var(--box-shadow); */
+            display: flex;
+            align-items: center;
+            padding: 20px 3%;
+            /* justify-content: space-between; */
+        }
+
+            .header .logo {
+                margin-right: auto;
+            }
+
+            .header .navbar a {
+                color: var(--light-color);
+                margin-right: 2rem;
+                font-size: 20px;
+                text-transform: capitalize;
+                text-decoration: none;
+            }
+
+                .header .navbar a:hover {
+                    color: green;
+                    background-color: #569f67;
+                    border-radius: 20px;
+                }
+
+            .header .icons i {
+                height: 3rem;
+                line-height: 3rem;
+                width: 3rem;
+                text-align: center;
+                color: var(--black);
+                background: #eee;
+                border-radius: 50%;
+                margin-left: .7rem;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+                .header .icons i:hover {
+                    color: rgb(176, 19, 19);
+                }
+
+            .header .search-form {
+                position: absolute;
+                background: #fff;
+                border-radius: .5rem;
+                display: flex;
+                align-items: center;
+                top: 110%;
+                right: 7%;
+                height: 4rem;
+                width: 30rem;
+                padding: 1rem;
+                display: none;
+            }
+
+                .header .search-form.active {
+                    display: flex;
+                }
+
+                .header .search-form #search-box {
+                    width: 80%;
+                    border: var(--border);
+                    border-radius: .5rem;
+                    padding: 1rem;
+                    font-size: 1.7rem;
+                    height: 80%;
+                }
+
+                .header .search-form label {
+                    font-size: 2rem;
+                    padding-left: 1rem;
+                    padding-right: .5rem;
+                    cursor: pointer;
+                }
+
+                    .header .search-form label:hover {
+                        color: red;
+                    }
+
+        #menu-bars {
+            display: none;
+        }
+
+        @media (max-width:991px) {
+
+
+            .header {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width:768px) {
+
+            #menu-bars {
+                display: inline-block;
+            }
+
+            .header .search-form {
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .header .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                display: none;
+            }
+
+                .header .navbar.active {
+                    display: block;
+                }
+
+                .header .navbar a {
+                    display: block;
+                    background: #f7f7f7;
+                    padding: 1.5rem;
+                    margin: 1.5rem;
+                    border-radius: .5rem;
+                    /* border:var(--border); */
+                }
+        }
         .begin {
             background-image: url(alhasabg.jpg);
             background-position:bottom;
@@ -26,7 +167,7 @@
         }
 
         h2 {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            /*font-family: "Gill Sans", sans-serif;*/
             color: darkolivegreen;
             -webkit-text-stroke: 1px black;
             text-align: center;
@@ -41,13 +182,12 @@
             border-radius: 5px;
         }
         h4 {
-            color: darkolivegreen;
+            color: darkolivegreen;;
             -webkit-text-stroke: 1px black;
-            font-size: 25px;
+            font-size: 28px;
             margin: 30px;
             text-shadow: 1px 1px 20px black;
         }
-
         h3 {
             color: darkolivegreen;
             -webkit-text-stroke: 1px black;
@@ -70,10 +210,10 @@
             opacity:0.98;
           
         }
-            .about p, h1 {
-                color: rgb(59, 109, 71);
+        .about p, h1 {
+                color: #E3735E;
                 text-align: center;
-                font-family: 'Poppins', sans-serif;
+               /* font-family: "Gill Sans", sans-serif;*/
             }
             .about h1 {
                 font-size: 50px;
@@ -89,28 +229,32 @@
             margin: 50px auto;
             opacity: 90%;
         }
+        .highlight {
+            display: grid;
+            width: 100%;
+        }
         .col{
             width:80%;
             height:80%;
             position:relative;
         }
-            .col input {
+        .col input {
                 padding: 5px;
                 margin: 17px;
                 border-radius: 20px;
                 width: 100px;
-                height: 50px;
+                height: 30px;
                 border: none;
                 font-size: 15px;
-                background-color: rgb(57, 107, 69);
+                background-color: #E3735E;
                 -webkit-transition: -webkit-transform,.3s,ease;
                 box-shadow: 2px 2px 10px black;
                 cursor: pointer;
-                font-weight:bolder;
-              
+                font-weight: bolder;
             }
-                .col input:hover {
+            .col input:hover {
                     -webkit-transform: scale(1.03);
+                    text-decoration:underline;
                 }
                 .row .col img {
                     width: 450px;
@@ -132,17 +276,17 @@
         }
         .Events .row {
             margin-top: 50px;
-            
+            cursor: pointer;
         }
         .Events h1 {
-            color: rgb(59, 109, 71);
+            color: #E3735E;
             font-size: 50px;
             text-shadow: 1px 1px 2px black;
-            font-family: 'Poppins', sans-serif;
+           /* font-family: 'Poppins', sans-serif;*/
         }
         .Events h3 {
             font-size: 4vmin;
-            color: rgb(59, 109, 71);
+            color: #E3735E;
             margin: 20px auto;
             text-shadow: 1px 1px 1px black;
         }
@@ -150,82 +294,28 @@
             font-size:15px;
         }
        .Events p {
-            font-family: 'Poppins', sans-serif;
+       /* font-family: "Gill Sans", sans-serif;*/
             padding: 0px 40px;
             text-align: center;
             font-size:15px;
-            position:relative;
+            /*position:relative;*/
+        }
+        .highlight h1 {
+            color: #E3735E;
+            font-size: 40px;
+            text-shadow: 1px 1px 2px black;
+           /* font-family: "Gill Sans", sans-serif;*/
+        }
+
+        .highlight h3 {
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 5px #999;
+            text-align: left;
         }
         .col:hover {
             -webkit-transform: scale(1.03);
         }
-        .col a {
-            color: black;
-            text-decoration: none;
-            font-size:20px;
-            text-shadow: 1px 1px 0.5px black;
-        }
-        .col a:hover{
-            text-decoration:underline;
-            
-        }
-       
-        .end {
-            width: 100%;
-            height: 45%;
-            background-color: #569f67;
-        }
-            .end h1 {
-               
-                color: #1f3a24;
-                text-shadow: 0.5px 0.5px 0.5px black;
-
-            }
-
-        .social a {
-            display: inline-block;
-            height: 40px;
-            width: 50px;
-            padding: 10px;
-            background-color: rgb(59, 109, 71);
-            box-shadow: 2px 2px 3px black;
-            opacity: 0.9;
-            margin-right: 10px;
-            text-align: center;
-            line-height: 10px;
-            border-radius: 50%;
-            color: black;
-            -webkit-transition: -webkit-transform,.3s,ease;
-            position: relative;
-            left: 38%;
-            
-           
-        }
-            .social a:hover {
-                -webkit-transform: scale(1.1);
-            }
-
-        .highlight h1{
-            color: rgb(59, 109, 71);
-            font-size: 40px;
-            text-shadow: 1px 1px 2px black;
-            font-family: 'Poppins', sans-serif;
-            
-        }
-        .highlight h3{
-            color:rgb(255, 255, 255);
-            text-shadow: 0 0 5px #999;
-            text-align: left;
-        }
-        .col:hover{
-            -webkit-transform:scale(1.03);
-        }
-        .end {
-            width: 100%;
-            height: auto;
-            background-color: #569f67;
-        }
-        .card{
+        .card {
             width: 300px;
             height: 250px;
             display: inline-block;
@@ -237,8 +327,8 @@
             background-position: center;
             background-size: cover;
             transition: transform 0.5s;
-            opacity: 90%;
         }
+
         .card1{
             background-image: url(nooba.jpg);
         }
@@ -276,84 +366,106 @@
         .card12{
             background-image:url(grandday.jpg)
         }
-        
-        .card:hover{
+        .card:hover {
             transform: translateY(-10px);
         }
-        .card p{
+
+        .card p {
             text-shadow: 1px 1px 2px black;
             font-size: 10px;
             color: rgb(214, 204, 204);
-        padding: 50px;
         }
+
         .swiper {
-      width: 100%;
-      height: 100%;
-    }
+            width: 100%;
+            height: 100%;
+        }
 
-    .swiper-slide {
-      text-align: center;
-     /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-    .swiper-pagination{
-        color: #000;
-    }
+        .swiper-slide {
+            text-align: center;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
 
-        .gallery{
+        .swiper-pagination {
+            color: #000;
+        }
+
+        .gallery {
             height: 80%;
             width: 100%;
             display: flex;
             margin: 5% auto 0;
             box-sizing: border-box;
         }
-        .gallery h1{
-            color: rgb(59, 109, 71);
-            font-size: 40px;
-            text-shadow: 1px 1px 2px black;
-            font-family: 'Poppins', sans-serif;
-        }
-        .img-box{
+
+            .gallery h1 {
+                color: #E3735E;
+                font-size: 40px;
+                text-shadow: 1px 1px 2px black;
+               /* font-family: "Gill Sans", sans-serif;*/
+            }
+            .img-box {
             margin: 0 1%;
             flex-grow: 1;
             flex-basis: 0;
             transition: .5s;
         }
-        .img-box img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            transition: .5s;
-        }
-        .img-box:hover{
+
+            .img-box img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: .5s;
+            }
+
+            .img-box:hover {
+                flex-basis: 50%;
+            }
+
+        .active {
             flex-basis: 50%;
         }
-        .active{
-            flex-basis: 50%;
-        }
-        .gallery:hover .active{
+
+        .gallery:hover .active {
             flex-basis: 0;
         }
-        .img-box:nth-child(1):hover{
+
+        .img-box:nth-child(1):hover {
             flex-basis: 30%;
         }
+
         .img-box h3 {
             position: relative;
-            color: rgb(59, 109, 71);
+            color: #E3735E;
             font-size: 15px;
         }
-        
+
+        .swiper-slide a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            text-shadow: 1px 1px 1px black;
+            position: relative;
+            top: 110px;
+            left: auto;
+        }
+
+            .swiper-slide a:hover {
+                text-decoration: underline;
+            }
+
         .clockbox {
 	margin: 100px ;
 	height: 100px; width: 370px;
@@ -366,24 +478,223 @@
     align-items:center;
         
 }
+
+footer {
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background: #111;
+        }
+
+            footer .content {
+                max-width: 1350px;
+                margin: auto;
+                padding: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+                footer .content p, a {
+                    color: #fff;
+                }
+
+                footer .content .box {
+                    width: 33%;
+                    transition: all 0.4s ease;
+                }
+
+                footer .content .topic {
+                    font-size: 22px;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 16px;
+                }
+
+                footer .content p {
+                    text-align: justify;
+                }
+
+                footer .content .lower .topic {
+                    margin: 24px 0 5px 0;
+                }
+
+                footer .content .lower i {
+                    padding-right: 16px;
+                }
+
+                footer .content .middle {
+                    padding-left: 80px;
+                }
+
+                    footer .content .middle a {
+                        line-height: 32px;
+                    }
+
+                footer .content .right input[type="text"] {
+                    height: 45px;
+                    width: 100%;
+                    outline: none;
+                    color: #d9d9d9;
+                    background: #000;
+                    border-radius: 5px;
+                    padding-left: 10px;
+                    font-size: 17px;
+                    border: 2px solid #222222;
+                }
+
+                footer .content .right input[type="submit"] {
+                    height: 42px;
+                    width: 100%;
+                    font-size: 18px;
+                    color: #d9d9d9;
+                    background: #eb2f06;
+                    outline: none;
+                    border-radius: 5px;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    margin-top: 12px;
+                    border: 2px solid #eb2f06;
+                    transition: all 0.3s ease-in-out;
+                }
+
+        .content .right input[type="submit"]:hover {
+            background: none;
+            color: #eb2f06;
+        }
+
+        footer .content .media-icons a {
+            font-size: 16px;
+            height: 45px;
+            width: 45px;
+            display: inline-block;
+            text-align: center;
+            line-height: 43px;
+            border-radius: 5px;
+            border: 2px solid #222222;
+            margin: 30px 5px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .content .media-icons a:hover {
+            border-color: #eb2f06;
+        }
+
+        label {
+            color: #d9d9d9;
+        }
+
+        footer .bottom {
+            width: 100%;
+            text-align: left;
+            margin-left: 10px;
+            color: #d9d9d9;
+            padding: 0 40px 5px 0;
+        }
+
+            footer .bottom a {
+                color: #eb2f06;
+            }
+
+        footer a {
+            transition: all 0.3s ease;
+        }
+
+            footer a:hover {
+                color: #eb2f06;
+            }
+
+        @media (max-width:1100px) {
+            footer .content .middle {
+                padding-left: 50px;
+            }
+        }
+
+        @media (max-width:950px) {
+            footer .content .box {
+                width: 50%;
+            }
+
+            .content .right {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width:560px) {
+            footer {
+                position: relative;
+            }
+
+                footer .content .box {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+
+                footer .content .middle {
+                    padding-left: 0;
+                }
+            }
     </style>
     <!-- -->
 </head>
 <body>
-  <header>
-    <a href="#" class="logo">ALHASA</a>
-    <nav class="navigation">
+  <header class="header">
+    <a href="#" class="logo"><img src="logo.png" alt="logo" width="50px"></a>
+    <nav class="navbar">
         <a href="#Events">Events</a>
+        <a href="#Restaurants">Restaurants & cafes </a>
         <a href="#Hotels">Hotels</a>
-        <a href="#Restaurants">Restaurants </a>
+        <a href="#Highlight">Highlight</a>
         <a href="index.html">Home</a>
+        <a href="Registration.html">Sign in</a>
+        <a href="Registration.html">Sign up</a>
     </nav>
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
 </header>
+ <!--            javascript            -->
+ <script>
+    let menu = document.querySelector('#menu-bars');
+    let navbar = document.querySelector('.navbar');
+
+    menu.onclick = () => {
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+        searchIcon.classList.remove('fa-times');
+        searchForm.classList.remove('active');
+    }
+
+    let searchIcon = document.querySelector('#search-icon');
+    let searchForm = document.querySelector('.search-form');
+
+    searchIcon.onclick = () => {
+        searchIcon.classList.toggle('fa-times');
+        searchForm.classList.toggle('active');
+        menu.classList.remove('fa-times');
+        navbar.classList.remove('active');
+    }
+
+    window.onscroll = () => {
+        menu.classList.remove('fa-times');
+        navbar.classList.remove('active');
+        searchIcon.classList.remove('fa-times');
+        searchForm.classList.remove('active');
+    }
+</script>
+
 <div>
     <section class="begin" class="clockbox" >
         
-        <div>
-            <h2>Alhasa</h2>
+        <div >
+            <h2>ALHASA</h2>
             <div class="line"></div>
             <h4><strong>Live the Modern Life to its Fullest</strong></h4>
         
@@ -392,16 +703,12 @@
             <h3 id="displayDateTime"></h3>
        
         </div>
-
-    
+    </section>
             
         </div>
            
-     </div>
-    </section>
-
     <section class="about">
-        <img src="alhasabg2.jpg" />
+        <img src="alhasabg2.jpg" class="about-img"/>
         <div class="about-text">
             <h1><strong>About Alhasa</strong></h1>
             <div class="line"></div>
@@ -418,7 +725,7 @@
         </div>
     </section>
     <!--events -->
-    <section class="Events">
+    <section class="Events" id="Events">
         <h1>Events</h1>
         <div class="line"></div>
 
@@ -426,18 +733,19 @@
             <div class="col">
                 <img src="Al Qarah Mountain.jpg" />
                 <h3>Al Qarah Mountain</h3>
-                <p>
-                  At just over 200 meters high, the limestone hills of Al Qarah offer a gentle climb, rewarded with spectacular views across the region. Take time to enjoy the vista, before exploring the hive of caves and passageways cut into the rock..
-                </p>
-                
-                <a> </a>
+                <p id="E1"> </p>
+                <a href="https://www.google.com/maps/place/Al-Qara+Hill/@25.4115019,49.6840596,15z/data=!3m1!4b1!4m5!3m4!1s0x3e37eb4ae5b873b5:0xaa6c467417e8fb93!8m2!3d25.4114832!4d49.6928144">
+                <input type="button" value="Learn more" />
+            </a>
 
             </div>
             <div class="col">
                 <img src="Alasfar lake.jpg" />
                 <h3>Alasfar lake</h3>
-                <p> Al-Asfar is located to the East of Umran city, in Al-Hasa, Eastern Saudi Arabia. The lake is surrounded by sand dunes and somewhat difficult to reach. Al-Asfar lake is one of the important wetland shallow lake in the region.The lake is a historic landmark of Al-Hasa
-                </p>
+                <p id="E2"></p>
+                <a href="https://www.google.com/maps/place/Asfar+Lake/@25.5489215,49.7406402,12z/data=!3m1!4b1!4m5!3m4!1s0x3e37c3acd7ab0fbb:0xa5489d82176e64b2!8m2!3d25.5252523!4d49.8086717">
+                <input type="button" value="Learn more" />
+            </a>
                 </div>
         </div>
 
@@ -445,14 +753,20 @@
             <div class="col">
                 <img src="Qaisariah souq.jpg" />
                 <h3>Qaisariah souq</h3>
-                <p>The open-air Souq Al Qaisariya is one of the oldest markets in the kingdom, thought to date back to 1822. More than 400 stores line the winding streets, selling a wide range of spices, scents and traditional handicrafts. Also on site is the popular Al-Said tea and coffee shop: the perfect spot to experience local hospitality and traditional Arabic coffee.</p>
-              </div>
+                <p id="E3"></p>
+                <a href="https://qaisariahsouq.com/en/">
+                <input type="button" value="Learn more" />
+            </a>
+            </div>
 
             <div class="col">
                 <img src="ibrahim palace.jpg" />
                 <h3>ibrahim palace.</h3>
-                <p>The Ibrahim Palace was built during the time of the first Saudi state and is considered to be an architectural masterpiece. A mixture of military and traditional Arabic design, it once served as an army base, but today is open to visit. Inside, the Al Qubba mosque is still in use, while the small museum has a collection of various artifacts and photographs.s</p>
-             </div>
+                <p id="E4"></p> 
+                <a href="https://www.google.com/maps/place/Ibrahim+Palace/@25.3788712,49.584705,17z/data=!3m1!4b1!4m5!3m4!1s0x3e3796ea7b87f94d:0xe089e6e369f717c3!8m2!3d25.3788664!4d49.5868937">
+                <input type="button" value="Learn more" />
+            </a>
+            </div>
         </div>
 
     </section>
@@ -460,68 +774,69 @@
     
 <!-- resturants -->
 
-   <section class="highlight" id="Restaurants">
-    <h1>Restaurants & Cafes</h1>
+   <section class="highlight" >
+    <h1 id="Restaurants">Restaurants & Cafes</h1>
     <div class="line"></div>
 
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"> 
-            <div class="card card1">
+         
+            <div class="swiper-slide"> 
+            <div class="card card1" onclick="this.querySelector('a').click(); return true;">
                 <h3>NOOBA KUSHARI</h3>
-                <P>working ours:<br> 12pm- 12am 
-                <br>Cuisine:<br>Arabic, Fast Food, Mediterranean, Middle Eastern </p> 
-                <a href="https://www.google.com/maps/place/NOOBA+Kushari+%D9%83%D8%B4%D8%B1%D9%8A+%D9%86%D9%88%D9%88%D8%A8%D8%A7%E2%80%AD/@25.4123254,49.6905308,17z/data=!3m1!4b1!4m5!3m4!1s0x3e3796aec150a213:0x6da931362335f3d6!8m2!3d25.4123206!4d49.6927195" class="location"> Learn More</a>
+                <P onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">working ours: 12pm- 12am 
+                <br>Cuisine:Arabic, Fast Food, Mediterranean, Middle Eastern </p> 
+                <a href="https://www.google.com/maps/place/NOOBA+Kushari+%D9%83%D8%B4%D8%B1%D9%8A+%D9%86%D9%88%D9%88%D8%A8%D8%A7%E2%80%AD/@25.4123254,49.6905308,17z/data=!3m1!4b1!4m5!3m4!1s0x3e3796aec150a213:0x6da931362335f3d6!8m2!3d25.4123206!4d49.6927195"> </a>
                  </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="card card2">
+            <div class="card card2" onclick="this.querySelector('a').click(); return true;">
                 <h3>MONDE</h3>
-            <P> working ours:<br> 8am- 12am
-            <br> Cuisine: <br>European, Internationa </p>
-                <a href="https://www.instagram.com/monde.sa/" class="location">Leaarn More</a>
+            <P onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"> working ours:8am- 12am
+            <br> Cuisine:European, Internationa </p>
+                <a href="https://www.instagram.com/monde.sa/"></a>
              </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="card card3">
+            <div class="card card3" onclick="this.querySelector('a').click(); return true;">
                 <h3>ALKEET</h3>
-            <p>working ours:<br> 12pm- 12am 
-              <br> Cuisine: <br>Seafood, Asian, Japanese, Indian</p>
-              <a href="https://alkeet-restaurant.business.site/" class="location">Leaarn More</a>
+            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">working ours:12pm- 12am 
+              <br> Cuisine:Seafood, Asian, Japanese, Indian</p>
+              <a href="https://alkeet-restaurant.business.site/" ></a>
              </div>
           </div>
 
 
           <div class="swiper-slide">
-            <div class="card card4">
+            <div class="card card4" onclick="this.querySelector('a').click(); return true;">
                 <h3>AL BUSTAN</h3>
-             <p >
-              working ours:<br> 4pm- 1am 
-              <br> Cuisine: <br>Lebanese, Mediterranean, Barbecue, Middle Eastern</p> 
-              <a href="https://alkeet-restaurant.business.site/" class="location">Leaarn More</a>
+             <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+              working ours:4pm- 1am 
+              <br> Cuisine:Lebanese, Mediterranean, Barbecue, Middle Eastern</p> 
+              <a href="https://alkeet-restaurant.business.site/"></a>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="card card5">
+            <div class="card card5" onclick="this.querySelector('a').click(); return true;">
                 <h3>AL SAYYED CAFFE</h3>
-             <p >
-              working ours:<br> 8m- 12am 
-              <br> Cuisine: <br>Caffe</p>
-              <a href="https://www.google.com/maps/place/Alsaid+Coffee/@25.3772553,49.5854263,17z/data=!3m1!4b1!4m5!3m4!1s0x3e3796bf830c76af:0xc026b3c210715f2!8m2!3d25.3772011!4d49.5896594" class="location">Leaarn More</a>
+             <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" >
+              working ours:8m- 12am 
+              <br> Cuisine:Caffe</p>
+              <a href="https://www.google.com/maps/place/Alsaid+Coffee/@25.3772553,49.5854263,17z/data=!3m1!4b1!4m5!3m4!1s0x3e3796bf830c76af:0xc026b3c210715f2!8m2!3d25.3772011!4d49.5896594"></a>
               
             </div>
             </div>
 
             <div class="swiper-slide">
-              <div class="card card6">
+              <div class="card card6" onclick="this.querySelector('a').click(); return true;">
           <h3>Dot Bakery & Cafe</h3>
-             <p >
-              working ours:<br> 6am- 12am 
-              <br> Cuisine: <br> Caffe, Breakfast </p>
-              <a href="https://www.dotbakery.sa/copy-of-al-khobar" class="location">Leaarn More</a>
+             <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+              working ours:6am- 12am 
+              <br> Cuisine:Caffe, Breakfast </p>
+              <a href="https://www.dotbakery.sa/copy-of-al-khobar" ></a>
             
             </div>
             </div>
@@ -537,52 +852,55 @@
 
      <!-- HOTELS -->
 
-   <section class="highlight" id="Restaurants">
+   <section class="highlight" id="Hotels">
     <h1>HOTELS</h1>
     <div class="line"></div>
 
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
+            
           <div class="swiper-slide"> 
-            <div class="card card7">
-                <h3>Somewhere hotel</h3>
-                <p>Somewhere Hotel Al Ahsa provides rooms in Al Ahsa. This 5-star hotel offers a spa experience, with its hot tub and fitness center.</p>
-                <a href="https://www.google.com/maps/place/Somewhere+Hotel+Al+Ahsa/@25.4048241,49.5651157,17z/data=!3m1!4b1!4m8!3m7!1s0x3e3797b334396fef:0x9555319226d07ffc!5m2!4m1!1i2!8m2!3d25.4048605!4d49.5673013"class="location">Learn More</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card card8">
-                <h3>Inter Continental</h3>
-                <p>The Al Ahsa InterContinental is a short drive from important sites such as the Joatha Mosque, Qaser Ibrahim, the old Kaisariah Market and Qara Mountain. 
-             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card card9">
-                <h3>Lily Palms Hotel</h3>
-                <p>Located in the heart Al-Ahsa city, Palms Lily Hotel Suites features free WiFi and aircondtioning. It is just one minute from the train station and next to the Intercontinental Hotel</p>
-                <a href="https://www.google.com/maps/place/Lily+Palms+Hotel/@25.3853828,49.5768763,17z/data=!3m1!4b1!4m8!3m7!1s0x3e3796fb95446073:0xa3467d4f2e47fc70!5m2!4m1!1i2!8m2!3d25.385378!4d49.579065" class="location">Learn More</a>
+            <div class="card card7" onclick="this.querySelector('a').click(); return true;" >
+                <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Somewhere Hotel Al Ahsa provides rooms in Al Ahsa. This 5-star hotel offers a spa experience, with its hot tub and fitness center.</p>
+                <a href="https://www.google.com/maps/place/Somewhere+Hotel+Al+Ahsa/@25.4048241,49.5651157,17z/data=!3m1!4b1!4m8!3m7!1s0x3e3797b334396fef:0x9555319226d07ffc!5m2!4m1!1i2!8m2!3d25.4048605!4d49.5673013"></a>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="card card10">
+            <div class="card card8" onclick="this.querySelector('a').click(); return true;">
+                <h3>Inter Continental</h3>
+                <p>The Al Ahsa InterContinental is a short drive from important sites such as the Joatha Mosque, Qaser Ibrahim, the old Kaisariah Market and Qara Mountain. 
+             </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card card9" onclick="this.querySelector('a').click(); return true;" >
+                <h3>Lily Palms Hotel</h3>
+                <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Located in the heart Al-Ahsa city, Palms Lily Hotel Suites features free WiFi and aircondtioning. It is just one minute from the train station and next to the Intercontinental Hotel</p>
+                <a href="https://www.google.com/maps/place/Lily+Palms+Hotel/@25.3853828,49.5768763,17z/data=!3m1!4b1!4m8!3m7!1s0x3e3796fb95446073:0xa3467d4f2e47fc70!5m2!4m1!1i2!8m2!3d25.385378!4d49.579065"></a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card card10" onclick="this.querySelector('a').click(); return true;">
                 <h3>GrandLilyHotelSuites</h3>
-                <p>At Grand Lily Hotel Suites you will find a 24-hour front desk. Other facilities offered at the property include luggage storage. The property offers free parking.</p>
-                <a href="https://www.google.com/maps/place/Grand+Lily+Hotel+Suites+%D8%AC%D8%B1%D8%A7%D9%86%D8%AF+%D9%84%D9%8A+%D9%84%D9%8A%E2%80%AD/@25.4212014,49.5712031,17z/data=!3m1!4b1!4m8!3m7!1s0x3e3796322522c72f:0x74bf9290b8adb2a3!5m2!4m1!1i2!8m2!3d25.4211966!4d49.5733918" class="location">Learn More</a>
+                <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">At Grand Lily Hotel Suites you will find a 24-hour front desk. Other facilities offered at the property include luggage storage. The property offers free parking.</p>
+                <a href="https://www.google.com/maps/place/Grand+Lily+Hotel+Suites+%D8%AC%D8%B1%D8%A7%D9%86%D8%AF+%D9%84%D9%8A+%D9%84%D9%8A%E2%80%AD/@25.4212014,49.5712031,17z/data=!3m1!4b1!4m8!3m7!1s0x3e3796322522c72f:0x74bf9290b8adb2a3!5m2!4m1!1i2!8m2!3d25.4211966!4d49.5733918"></a>
             </div>
           </div>
+
           <div class="swiper-slide">
-            <div class="card card11">
+            <div class="card card11" onclick="this.querySelector('a').click(); return true;" >
                 <h3>AlMuhaidb Residence</h3>
-                <p>Al Muhaidb Residence in Al Ahsa features 4-star accommodations with a fitness center, a restaurant and free WiFi</p>
-                <a href="https://www.google.com/maps/place/Al+Muhaidab+Residence+Al+Ahsa/@25.3618931,49.5492744,17z/data=!3m1!4b1!4m8!3m7!1s0x3e3797d69d8062b9:0xe4c0996eac0e2871!5m2!4m1!1i2!8m2!3d25.3618709!4d49.5534091" class="location">Learn More</a>
+                <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Al Muhaidb Residence in Al Ahsa features 4-star accommodations with a fitness center, a restaurant and free WiFi</p>
+                <a href="https://www.google.com/maps/place/Al+Muhaidab+Residence+Al+Ahsa/@25.3618931,49.5492744,17z/data=!3m1!4b1!4m8!3m7!1s0x3e3797d69d8062b9:0xe4c0996eac0e2871!5m2!4m1!1i2!8m2!3d25.3618709!4d49.5534091"></a>
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="card card12">
+            <div class="card card12" onclick="this.querySelector('a').click(); return true;">
                 <h3>Grand Day</h3>
-                <p>At Grand day you'll find a restaurant serving International cuisine. Vegetarian and halal options can also be requested</p>
-                <a href="https://www.google.com/maps/place/Grand+day+hotel/@25.3839245,49.5915123,17z/data=!4m18!1m9!3m8!1s0x3e379754615dacbd:0xdebdabfd18cdb25d!2sGrand+day+hotel!5m2!4m1!1i2!8m2!3d25.3839245!4d49.593701!3m7!1s0x3e379754615dacbd:0xdebdabfd18cdb25d!5m2!4m1!1i2!8m2!3d25.3839245!4d49.593701" class="location">Learn More</a>
+                <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">At Grand day you'll find a restaurant serving International cuisine. Vegetarian and halal options can also be requested</p>
+                <a href="https://www.google.com/maps/place/Grand+day+hotel/@25.3839245,49.5915123,17z/data=!4m18!1m9!3m8!1s0x3e379754615dacbd:0xdebdabfd18cdb25d!2sGrand+day+hotel!5m2!4m1!1i2!8m2!3d25.3839245!4d49.593701!3m7!1s0x3e379754615dacbd:0xdebdabfd18cdb25d!5m2!4m1!1i2!8m2!3d25.3839245!4d49.593701" ></a>
             </div>
           </div>
      
@@ -639,37 +957,63 @@
     });
   </script>
    </section>
-   
-    <section class="highlight">
-        <h1>HIGHLIGHT</h1>
-        <div class="line"></div>
+   <!-- Highlight-->
+   <section class="highlight" id="Highlight">
+    <h1>HIGHLIGHT</h1>
+    <div class="line"></div>
 
-        <div class="gallery">
-            <div class="img-box active">
-                <img src="seas.jpeg">
-                <h3>Riyadh Season</h3>
-            </div>
-            <div class="img-box">
-                <img src="Jedd.jpeg">
-                <h3>Jeddah Season</h3>
-            </div>
-            <div class="img-box">
-                <img src="Diriy.jpeg">
-                <h3>Diriyah Season</h3>
-            </div>
-            <div class="img-box">
-                <img src="alula.jpeg">
-                <h3>Alula Season</h3>
-            </div>
-            <div class="img-box">
-                <a><img src="abhahi.jpeg"></a>
-                <h3>Abha Season</h3>
-            </div>
+    <div class="gallery">
+
+        <div class="img-box active" onclick="this.querySelector('a').click(); return true;">
+            <img src="seas.jpeg">
+            <h3>Riyadh Season</h3>
+            <a href="https://riyadhseason.sa/"></a>
         </div>
-    </section>
+
+        <div class="img-box" onclick="this.querySelector('a').click(); return true;">
+            <img src="Jedd.jpeg">
+            <h3>Jeddah Season</h3>
+            <a href="https://ticketmx.jeddahseason.sa/en/g/20/jeddah-season"></a>
+        </div>
+
+        <div class="img-box" onclick="this.querySelector('a').click(); return true;">
+            <img src="Diriy.jpeg">
+            <h3>Diriyah Season</h3>
+            <a href="https://diriyahseason.sa/"></a>
+        </div>
+
+        <div class="img-box" onclick="this.querySelector('a').click(); return true;">
+            <img src="alula.jpeg">
+            <h3>Alula Season</h3>
+            <a href="https://www.experiencealula.com/en/alula-moments"></a>
+        </div>
+
+        <div class="img-box" onclick="this.querySelector('a').click(); return true;">
+            <a><img src="abhahi.jpeg"></a>
+            <h3>Abha Season</h3>
+            <a href="https://www.visitsaudi.com/en/abha-festival"></a>
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!--clocl script-->
+
+    <!--ANIMATION-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            distance: '60px',
+            duration: 2500,
+            reset: true
+        });
+        sr.reveal('.haed', { dalay: 200, origin: 'top' });
+        sr.reveal('.about-img', { dalay: 1000, origin: 'left' });
+        sr.reveal('.about-text', { dalay: 1000, origin: 'right' });
+    </script>
+
+    <!--clock script-->
     <script>
     function displaytime(){
     var session = "";
@@ -692,24 +1036,108 @@
 }
 setInterval(displaytime, 10);
 </script>
+<!--mouseover script-->
+<script>
+    function mouseOver(tutu1) {
+    tutu1.style.display='none';
+    }
 
-	
+    function mouseOut(tutu1) {
+        tutu1.style.display='block';
+    }
+</script>
 
-     
-    <footer>
-      <section class="end">
-          <h1>CONNECT WITH US</h1>
-          <br />
-          <br />
-          <div class="social">
 
-              <a href="https://www.facebook.com/ExperienceAlUla/"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://twitter.com/ExperienceAlUla"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/experiencealula/"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.tiktok.com/@experiencealula"><i class="fab fa-tiktok"></i></a>
-          </div>
-      </section>
-  </footer>
+<!-- EVENT CLASS-->
+
+<script>
+class events{
+  constructor(eventname) {
+    this.eventname = eventname;
+  }
+}
+
+event = new events("Al Qarah Mountain");
+document.getElementById("E1").innerHTML =  event.eventname + " at just over 200 meters high, the limestone hills of Al Qarah offer a gentle climb, rewarded with spectacular views across the region. Take time to enjoy the vista, before exploring the hive of caves and passageways cut into the rock..";
+
+event = new events("Alasfar lake");
+document.getElementById("E2").innerHTML =  event.eventname + "  is located to the East of Umran city, in Al-Hasa, Eastern Saudi Arabia. The lake is surrounded by sand dunes and somewhat difficult to reach. Al-Asfar lake is one of the important wetland shallow lake in the region.The lake is a historic landmark of Al-Hasa";
+
+
+event = new events("Qaisariah souq");
+document.getElementById("E3").innerHTML =  event.eventname + " is one of the oldest markets in the kingdom, thought to date back to 1822. More than 400 stores line the winding streets, selling a wide range of spices, scents and traditional handicrafts. Also on site is the popular Al-Said tea and coffee shop: the perfect spot to experience local hospitality and traditional Arabic coffee";
+        
+event = new events("Ibrahim palace");
+document.getElementById("E4").innerHTML =  event.eventname + " was built during the time of the first Saudi state and is considered to be an architectural masterpiece. A mixture of military and traditional Arabic design, it once served as an army base, but today is open to visit. Inside, the Al Qubba mosque is still in use, while the small museum has a collection of various artifacts and photographs";
+            
+</script>
+
+ <!-- Initialize Swiper -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+ <script>
+     var swiper = new Swiper(".mySwiper", {
+         slidesPerView: 3,
+         spaceBetween: 30,
+         slidesPerGroup: 3,
+         loop: true,
+         loopFillGroupWithBlank: true,
+         pagination: {
+             el: ".swiper-pagination",
+             clickable: true,
+         },
+         navigation: {
+             nextEl: ".swiper-button-next",
+             prevEl: ".swiper-button-prev",
+         },
+     });
+ </script>
+<br>
+<br>
+<br>
+<footer>
+    <div class="content">
+        <div class="left box">
+            <div class="upper">
+                <div class="topic"> About our website</div>
+                <label>
+                    To discovre more about Saudi Arabia and its activities ,cities, regions, pleces and more entertainment options
+                </label>
+            </div>
+            <div class="lower">
+                <div class="topic">Contact us</div>
+                <div class="phone">
+                    <a href="#"><i class="fas fa-phone-volume"></i>8002444010</a>
+                </div>
+                <div class="email">
+                    <a href="#"><i class="fas fa-envelope"></i>explore.saudi11@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="middle box">
+            <div class="topic">Quick links</div>
+            <div><a href="#">Home page</a></div>
+            <div><a href="#">contact us</a></div>
+            <div><a href="#">about us</a></div>
+
+        </div>
+        <div class="right box">
+            <div class="topic">Find us</div>
+            <form action="#">
+                <p>our social media</p>
+                <div class="media-icons">
+                    <a href="https://www.facebook.com/hasatourism/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/alhassa_places/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/HasaTourism"><i class="fab fa-twitter"></i></a>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="bottom">
+        <p> Copyright © 2023 <a href="#">Saudi Tourism Authority</a> All rights reserved</p>
+    </div>
+</footer>	
+
 </body>
 
 
