@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JEDDAH</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        * {
+            font-family: "Gill Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.551);
+            /* box-shadow: var(--box-shadow); */
+            display: flex;
+            align-items: center;
+            padding: 20px 3%;
+            /* justify-content: space-between; */
+        }
+
+        .header .logo {
+            margin-right: auto;
+        }
+
+        .header .navbar a {
+            color: var(--light-color);
+            margin-right: 2rem;
+            font-size: 20px;
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+
+        .header .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .header .icons i {
+            height: 3rem;
+            line-height: 3rem;
+            width: 3rem;
+            text-align: center;
+            color: var(--black);
+            background: #eee;
+            border-radius: 50%;
+            margin-left: .7rem;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .header .icons i:hover {
+            background-color: #000;
+            color: #fffc;
+        }
+
+        .header .search-form {
+            position: absolute;
+            background: #fff;
+            border-radius: .5rem;
+            display: flex;
+            align-items: center;
+            top: 110%;
+            right: 7%;
+            height: 4rem;
+            width: 30rem;
+            padding: 1rem;
+            display: none;
+        }
+
+        .header .search-form.active {
+            display: flex;
+        }
+
+        .header .search-form #search-box {
+            width: 80%;
+            border: var(--border);
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 1.7rem;
+            height: 80%;
+        }
+
+        .header .search-form label {
+            font-size: 2rem;
+            padding-left: 1rem;
+            padding-right: .5rem;
+            cursor: pointer;
+        }
+
+            .header .search-form label:hover {
+                color: red;
+            }
+
+        #menu-bars {
+            display: none;
+        }
+
+        @media (max-width:991px) {
+
+
+            .header {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width:768px) {
+
+            #menu-bars {
+                display: inline-block;
+            }
+
+            .header .search-form {
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .header .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                display: none;
+            }
+
+                .header .navbar.active {
+                    display: block;
+                }
+
+                .header .navbar a {
+                    display: block;
+                    background: #f7f7f7;
+                    padding: 1.5rem;
+                    margin: 1.5rem;
+                    border-radius: .5rem;
+                    /* border:var(--border); */
+                }
+        }
+        .begin {
+            background-image: url(Jeddah.jpeg);
+            background-position: bottom;
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.98;
+        }
+
+        h2 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color:#659d97;
+            -webkit-text-stroke: 1px black;
+            text-align: center;
+            font-size: 90px;
+            text-shadow: 1px 1px 20px black;
+        }
+
+        .line {
+            width: 150px;
+            height: 4px;
+            background-color: black;
+            margin: 3px auto;
+            border-radius: 5px;
+        }
+
+        h4 {
+            color: #659d97;
+            -webkit-text-stroke: 1px black;
+            font-size: 28px;
+            margin: 30px;
+            text-shadow: 1px 1px 20px black;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .about img {
+            width: 550px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 10px 10px 30px black;
+        }
+
+        .about p, h1 {
+            color: #659d97;
+            text-align: center;
+            font-family: "Gill Sans", sans-serif;
+        }
+
+        .about h1 {
+            font-size: 50px;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .about p {
+            color: black;
+        }
+
+        .Events {
+            display: grid;
+            width: 100%;
+            margin: 50px auto;
+        }
+
+        .highlight {
+            display: grid;
+            width: 100%;
+        }
+
+        .col {
+            width: 80%;
+            height: 80%;
+            position: relative;
+        }
+
+        .col input {
+            padding: 5px;
+            margin: 17px;
+            border-radius: 20px;
+            width: 100px;
+            height: 30px;
+            border: none;
+            font-size: 15px;
+            background-color: #659d97;
+            -webkit-transition: -webkit-transform,.3s,ease;
+            box-shadow: 2px 2px 10px black;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+
+        .col input:hover {
+            -webkit-transform: scale(1.03);
+            text-decoration:underline;
+        }
+
+        .row .col img {
+            width: 450px;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px black;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .row .col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            -webkit-transition: -webkit-transform,.3s,ease;
+        }
+
+        .Events .row {
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        .Events h1 {
+            color: #659d97;
+            font-size: 50px;
+            text-shadow: 1px 1px 2px black;
+            font-family: "Gill Sans", sans-serif;
+        }
+
+        .Events h3 {
+            text-align: center;
+            font-size: 4vmin;
+            color: #659d97;
+            margin: 20px auto;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .Events h5 {
+            font-size: 15px;
+        }
+
+        .Events p {
+            font-family: "Gill Sans", sans-serif;
+            padding: 0px 40px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .highlight h1 {
+            color: #659d97;
+            font-size: 40px;
+            text-shadow: 1px 1px 2px black;
+            font-family: "Gill Sans", sans-serif;
+        }
+
+        .highlight h3 {
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 5px #999;
+            text-align: left;
+        }
+
+        .col:hover {
+            -webkit-transform: scale(1.03);
+        }
+
+
+        .card {
+            width: 300px;
+            height: 250px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+        }
+
+        .card1{
+            background-image: url(kuuru.jpeg);
+        }
+        .card2{
+            background-image: url(kabana.jpeg);
+        }
+        .card3{
+            background-image: url(nobu.jpeg);
+        }
+        .card4{
+            background-image: url(nawa.webp);
+        }
+        .card5{
+            background-image: url(chant.webp);
+        }
+        .card6{
+            background-image:url(broots.jpeg)
+        }
+        .card7{
+            background-image: url(chub.jpeg);
+        }
+        .card8{
+            background-image: url(medd.jpg);
+        }
+        .card9{
+            background-image: url(cup.jpeg);
+        }
+        .card11{
+            background-image: url(rasewood.webp);
+        }
+        .card12{
+            background-image: url(intercon.jpeg);
+        }
+        .card13{
+            background-image: url(sheraton.jpeg);
+        }
+        .card14{
+            background-image: url(waldorf.jpeg);
+        }
+        .card15{
+            background-image: url(parkha.jpeg);
+        }
+        .card16{
+            background-image: url(movenpick.jpeg);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card p {
+            text-shadow: 1px 1px 2px black;
+            font-size: 10px;
+            color: rgb(214, 204, 204);
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-pagination {
+            color: #000;
+        }
+
+        .gallery {
+            height: 80%;
+            width: 100%;
+            display: flex;
+            margin: 5% auto 0;
+            box-sizing: border-box;
+        }
+
+            .gallery h1 {
+                color: #659d97;
+                font-size: 40px;
+                text-shadow: 1px 1px 2px black;
+                font-family: "Gill Sans", sans-serif;
+            }
+
+        .img-box {
+            margin: 0 1%;
+            flex-grow: 1;
+            flex-basis: 0;
+            transition: .5s;
+        }
+
+            .img-box img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: .5s;
+            }
+
+            .img-box:hover {
+                flex-basis: 50%;
+            }
+
+        .active {
+            flex-basis: 50%;
+        }
+
+        .gallery:hover .active {
+            flex-basis: 0;
+        }
+
+        .img-box:nth-child(1):hover {
+            flex-basis: 30%;
+        }
+
+        .img-box h3 {
+            position: relative;
+            color: #659d97;
+            font-size: 15px;
+        }
+
+        .swiper-slide a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            text-shadow: 1px 1px 1px black;
+            position: relative;
+            top: 110px;
+            left: auto;
+        }
+
+            .swiper-slide a:hover {
+                text-decoration: underline;
+            }
+            /*time*/
+        .clockbox1 {
+            text-align: center;
+            font-size: 20px;
+            align-items: center;
+            color: #659d97;
+            text-shadow: 1px 1px 20px black;
+            -webkit-text-stroke: 1px black;
+        }
+        /* new foter*/
+        footer {
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background: #111;
+        }
+
+        footer .content {
+            max-width: 1350px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer .content p, a {
+            color: #fff;
+        }
+
+        footer .content .box {
+            width: 33%;
+            transition: all 0.4s ease;
+        }
+
+        footer .content .topic {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        footer .content p {
+            text-align: justify;
+        }
+
+        footer .content .lower .topic {
+            margin: 24px 0 5px 0;
+        }
+
+        footer .content .lower i {
+            padding-right: 16px;
+        }
+
+        footer .content .middle {
+            padding-left: 80px;
+        }
+
+        footer .content .middle a {
+            line-height: 32px;
+        }
+
+        footer .content .right input[type="text"] {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            color: #d9d9d9;
+            background: #000;
+            border-radius: 5px;
+            padding-left: 10px;
+            font-size: 17px;
+            border: 2px solid #222222;
+        }
+
+        footer .content .right input[type="submit"] {
+            height: 42px;
+            width: 100%;
+            font-size: 18px;
+            color: #d9d9d9;
+            background: #659d97;
+            outline: none;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 12px;
+            border: 2px solid #659d97;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .content .right input[type="submit"]:hover {
+            background: none;
+            color: #659d97;
+        }
+
+        footer .content .media-icons a {
+            font-size: 16px;
+            height: 45px;
+            width: 45px;
+            display: inline-block;
+            text-align: center;
+            line-height: 43px;
+            border-radius: 5px;
+            border: 2px solid #222222;
+            margin: 30px 5px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .content .media-icons a:hover {
+            border-color: #659d97;
+        }
+
+        label {
+            color: #d9d9d9;
+        }
+
+        footer .bottom {
+            width: 100%;
+            text-align: left;
+            margin-left: 10px;
+            color: #d9d9d9;
+            padding: 0 40px 5px 0;
+        }
+
+            footer .bottom a {
+                color: #659d97;
+            }
+
+        footer a {
+            transition: all 0.3s ease;
+        }
+
+            footer a:hover {
+                color: #659d97;
+            }
+
+        @media (max-width:1100px) {
+            footer .content .middle {
+                padding-left: 50px;
+            }
+        }
+
+        @media (max-width:950px) {
+            footer .content .box {
+                width: 50%;
+            }
+
+            .content .right {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width:560px) {
+            footer {
+                position: relative;
+            }
+
+                footer .content .box {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+
+                footer .content .middle {
+                    padding-left: 0;
+                }
+        }
+   
+    </style>
+
+</head>
+<body>
+    <!--           header          -->
+    <header class="header">
+
+        <a href="#" class="logo"><img src="logo.png" alt="logo" width="50px"></a>
+
+        <nav class="navbar">
+            <a href="#Events">Events</a>
+            <a href="#Restaurants">Restaurants </a>
+            <a href="#Hotels">Hotels</a>
+            <a href="index.html">Home</a>
+            <a href="Registration.html">Sign in</a>
+            <a href="Registration.html">Sign up</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+    </header>
+    <!--            javascript            -->
+    <script>
+        let menu = document.querySelector('#menu-bars');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+            searchIcon.classList.remove('fa-times');
+            searchForm.classList.remove('active');
+        }
+
+        let searchIcon = document.querySelector('#search-icon');
+        let searchForm = document.querySelector('.search-form');
+
+        searchIcon.onclick = () => {
+            searchIcon.classList.toggle('fa-times');
+            searchForm.classList.toggle('active');
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+            searchIcon.classList.remove('fa-times');
+            searchForm.classList.remove('active');
+        }
+    </script>
+
+    <div>
+        <section class="begin">
+            <div class="clockbox1">
+                <h2>Jeddah</h2>
+                <div class="line"></div>
+                <h4><strong>A global art scene awaits you</strong></h4>
+                <!--time-->
+                <h3 id="displayDate"> </h3>
+                <h3 id="displayDateTime"></h3>
+            </div>
+        </section>
+    </div>
+    <section class="about">
+        <img src="jedda.jpeg" class="about-img" />
+        <div class="about-text">
+            <h1><strong>About Jeddah</strong></h1>
+            <div class="line"></div>
+            <br />
+            <p>
+                The all-year-round warm city of Jeddah, the captivating hub, invites you to be part of the millions of worldwide visitors 
+                from traders and explorers since ancient times. Jeddah is the birthplace of worldwide arts and music, and a gathering spot for 
+                multi-vibrant cultures, a unique blend that left its mark on Jeddah’s exquisite cuisine of many fine dishes with global tastes. 
+                Here, you will have a chance to see the best view out there of the colorful sunset shades shimmering off the divine Red Sea shores.
+            </p>
+        </div>
+    </section>
+    <!--events -->
+    <section class="Events" id="Events">
+        <h1>Events</h1>
+        <div class="line"></div>
+
+        <div class="row">
+            <div class="col">
+                <img src="albalad.jpeg" />
+                <h3>Al-Balad</h3>
+                <h5></h5>
+                <p id="E1"></p>
+                <a href="https://jeddahalbalad.sa/">
+                    <input type="button" value="Learn more" />
+                </a>
+            </div>
+
+            <div class="col">
+                <img src="murjan.webp" />
+                <h3>Souq Al-Murjan</h3>
+                <h5></h5>
+                <p id="E2"></p>
+                <a href="https://www.google.com/search?hotel_occupancy=2&biw=1440&bih=688&tbs=lf:1,lf_ui:1&tbm=lcl&sxsrf=AJOqlzWOgBnJ4_1Tenkh0Z-AVFMJcFjeZQ:1675993680538&q=souq+Al-Murjan+jeddah&rflfq=1&num=10&rldimm=638463918247616876&ved=2ahUKEwjun-X_6on9AhW1TKQEHV1zDNwQu9QIegQIEhAK#rlfi=hd:;si:3084543302840605962,l,ChVzb3VxIEFsLU11cmphbiBqZWRkYWhI083cpOmAgIAIWh0QABgBGAIiFXNvdXEgYWwgbXVyamFuIGplZGRhaJIBD3Nob3BwaW5nX2NlbnRlcqoBDBABKggiBHNvdXEoAA,y,Dzqg_tlBCcE;mv:[[21.7038032,39.232758499999996],[21.4006625,39.0915578]]">
+                    <input type="button" value="Learn more" />
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="fountain.jpeg" />
+                <h3>King Fahd's Fountain</h3>
+                <h5></h5>
+                <p id="E3"></p>
+                <a href="https://www.google.com/maps/place/King+Fahad's+Fountain/@21.5156556,39.1450512,15z/data=!4m6!3m5!1s0x15c3c57a16912335:0x15ad2b6a03572e0f!8m2!3d21.5156556!4d39.1450512!16s%2Fm%2F02627fs">
+                    <input type="button" value="Learn more" />
+                </a>
+            </div>
+
+            <div class="col">
+                <img src="aqu.jpeg" />
+                <h3>Fakieh Aquarium</h3>
+                <h5></h5>
+                <p id="E4"></p>
+                <a href="https://www.fakiehaquarium.com/">
+                    <input type="button" value="Learn more" />
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="tayebat.jpeg" />
+                <h3>Tayebat Museum</h3>
+                <h5></h5>
+                <p id="E5"></p>
+                <a href="https://www.google.com/maps/place/Al+Tayebat+International+City/@21.5812175,39.1769051,15z/data=!4m2!3m1!1s0x0:0x2eb6eb4b515cd77c?sa=X&ved=2ahUKEwjimJ7I7In9AhWmY6QEHfHxALcQ_BJ6BAh6EAg">
+                    <input type="button" value="Learn more" />
+                </a>
+            </div>
+
+            <div class="col">
+                <img src="baab.jpeg" />
+                <h3>Baab Makkah</h3>
+                <h5></h5>
+                <p id="E6"></p>
+                <a href="https://welcomesaudi.com/activity/baab-makkah-jeddah-makkah-gate">
+                    <input type="button" value="Learn more" />
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Restaurants & Cafes -->
+    <section class="highlight">
+        <h1 id="Restaurants">Restaurants & Cafes</h1>
+        <div class="line"></div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="card card1" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Kuuru</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Japanese and Peruvian cuisines meld to form an authentic new culinary experience known as Nikkei cooking. Theatrical, colorful, and dramatically delicious, this is fresh, modern luxury dining, inspired by tradition and waiting to be discovered.
+                            </p>
+                            <a href="https://www.kuururestaurant.com/"></a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="card card2" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Kabana</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Afghan fusion cuisine with a Mediterranean twist. One of the most massive upscale Fusion food destinations in all of Jeddah, it offers a distinctive experience with dishes made for sharing in its comfortable and elegant atmosphere.
+                            </p><a href="https://www.instagram.com/kabanaksa/?hl=en"></a>
+                     </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card3" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Nobu</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Nobu branch, the world’s most recognized Japanese restaurant, known for its innovative new-style cuisine. Located on the popular Jeddah Corniche the heart of Al Nawras Resort, the most iconic resort in Jeddah overlooking the Jeddah Corniche.
+                            </p><a href="https://www.noburestaurants.com/jeddah/nobu-jeddah-japanese-restaurant/"></a>
+                        </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card4" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Nawa Patio</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Inspired by ancient civilizations such as the Sumerians, Thamud, Lihyan, and Nabataeans. And the use of plastic is avoided wherever possible. Diners are also encouraged to take home their excess food or give it to local food banks, charity organizations, and humanitarian programs.
+                            </p><a href="https://www.instagram.com/nawapatio/?hl=en"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card5" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Chant Bistro</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">An exciting experience for breakfast, lunch, bakeries and sweets. Chant Bistro Restaurant is located in the city of Jeddah, Al-Naim District, Al-Amal Road. The restaurant offers distinctive types and a varied menu that serves breakfast.
+                            </p><a href="https://www.google.com/maps/place/Chant+bistro/@21.6252788,39.1440169,15z/data=!4m2!3m1!1s0x0:0x510e5055ae1069a2?sa=X&ved=2ahUKEwjPuI369Yn9AhUlVaQEHbNlD-cQ_BJ6BAhXEAg"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card6" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Broots Café</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Unique in serving chocolate-based beverages and products, and its freshly baked pastries have very high and positive reviews. These include: vegan banana cakes and gluten-free chocolate cakes. The café has that African feel which is reflected on its wall decorations.
+                            </p><a href="https://www.instagram.com/brootscafe/?hl=en"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card7" onclick="this.querySelector('a').click(); return true;">
+                        <h3>C.Hub</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">The reward of your day; its menu is full of the best carefully selected breakfast options or low-fat meals, while maintaining excellent coffee that will always be among your favorites.
+                            </p><a href="https://www.instagram.com/c.hub.ksa/?hl=en"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card8" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Medd Café & Roastery</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">one of Jeddah’s most popular coffee shops. Its laid-back setup and friendly atmosphere is a great way to start or end a long day at work. The concept of the café is to maintain a minimalistic vibe with absolutely no distractions from its exceptional coffee.
+                            </p><a href="https://meddcoffee.com/en/"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card9" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Cup & Couch Cafe</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">the go-to neighborhood café, creating a comfortable space complete with mountains of pillows, stacks of board games, and really comfortable couches! What’s special about Cup & Couch is the fact that it is family-run.
+                            </p><a href="https://www.instagram.com/cupandcouch/?hl=en"></a>
+                    </div>
+                </div>
+
+            </div>
+            <br/> <br/>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
+    <!-- Hotels -->
+    <section class="highlight">
+        <h1 id="Hotels">Hotels</h1>
+        <div class="line"></div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide" >
+                    <div class="card card11" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Rosewood Hotel</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Where the desert meets the Red Sea, all the amenities and attractions a leisure or business traveler desires are close at hand in Jeddah. You are invited to explore this historic city filled with cultural and artistic sites.
+                            </p><a href="https://www.rosewoodhotels.com/"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card12" onclick="this.querySelector('a').click(); return true;">
+                        <h3>InterContinental</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Enjoy breathtaking views of the Red Sea front and King Fahad's Fountain. Nestled in a prime location close to Jeddah business centers and top attractions such as Al Balad, shopping malls and famous historical sites, with fast access to King Abdulaziz International Airport.
+                            <a href="https://www.intercontinental.com/"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card13" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Sheraton </h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">With an exclusive location on the fashionable North Corniche and breathtaking views of the Red Sea, Sheraton Jeddah Hotel boasts 172 rooms and suites featuring Nespresso machines, comfortable work spaces and memorable views of the city and corniche.
+                            </p><a href="https://www.marriott.com/en-us/hotels/jedsi-sheraton-jeddah-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card14" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Waldorf Astoria</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Arrive to elegance under a three-story Swarovski chandelier and wake up to views of Jeddah. Adorned with gold accents, Italian furnishings and glistening crystal, our resort is an oasis on the Red Sea.Enjoy personalized butler service and modern amenities including an EV Charging station.
+                            </p><a href="https://www.hilton.com/en/hotels/jedwawa-waldorf-astoria-jeddah-qasr-al-sharq/"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card15" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Park Hyatt</h3>
+                            <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Experience the art of personalized luxury at the award-winning Park Hyatt Jeddah-Marina, Club & Spa. This multi-faceted 5-star resort is situated in beautiful and tranquil landscaped gardens on the sea shore of Jeddah’s Corniche, views of the Red Sea and King Fahad fountain.
+                            </p><a href="https://www.hyatt.com/"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card card16" onclick="this.querySelector('a').click(); return true;">
+                        <h3>Movenpick Resort</h3>
+                        <p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Welcome to your dream island. The private island resort combines Arabian tradition with Swiss luxury and hospitality, so you can enjoy unforgettable moments in paradise.
+                        </p><a href="https://www.movenpick.com/en/middle-east/saudi-arabia/jeddah/resort-jeddah-al-nawras.html"></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br/> <br/>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
+    <!-- Highlight-->
+    <section class="highlight">
+        <h1>HIGHLIGHT</h1>
+        <div class="line"></div>
+
+        <div class="gallery">
+
+            <div class="img-box active" onclick="this.querySelector('a').click(); return true;">
+                <img src="seas.jpeg">
+                <h3>Riyadh Season</h3>
+                <a href="https://riyadhseason.sa/"></a>
+            </div>
+
+            <div class="img-box" onclick="this.querySelector('a').click(); return true;">
+                <img src="Jedd.jpeg">
+                <h3>Jeddah Season</h3>
+                <a href="https://ticketmx.jeddahseason.sa/en/g/20/jeddah-season"></a>
+            </div>
+
+            <div class="img-box" onclick="this.querySelector('a').click(); return true;">
+                <img src="Diriy.jpeg">
+                <h3>Diriyah Season</h3>
+                <a href="https://diriyahseason.sa/"></a>
+            </div>
+
+            <div class="img-box" onclick="this.querySelector('a').click(); return true;">
+                <img src="alula.jpeg">
+                <h3>Alula Season</h3>
+                <a href="https://www.experiencealula.com/en/alula-moments"></a>
+            </div>
+
+            <div class="img-box" onclick="this.querySelector('a').click(); return true;">
+                <a><img src="abhahi.jpeg"></a>
+                <h3>Abha Season</h3>
+                <a href="https://www.visitsaudi.com/en/abha-festival"></a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--ScrollReveal library-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        const sr = ScrollReveal({
+            distance: '60px',
+            duration: 2500,
+            reset: true
+        });
+
+        sr.reveal('.about-img', { dalay: 1000, origin: 'left' });
+        sr.reveal('.about-text', { dalay: 1000, origin: 'right' });
+    </script>
+    
+    <!--clocl script-->
+    <script>
+        function displaytime() {
+            var session = "";
+            var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            var today = new Date();
+            var day = today.getDay();
+            var date = today.getFullYear() + "/" + (today.getMonth() + 1) + "/" + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+            if (today.getHours() >= 12) {
+                session = "PM";
+            } else {
+                session = "AM";
+            }
+
+            document.getElementById("displayDate").innerHTML = daylist[day] + ", " + month[today.getMonth()] + " " + today.getDate();
+            document.getElementById("displayDateTime").innerHTML = date + " " + time + " " + session;
+        }
+        setInterval(displaytime, 10);
+    </script>
+
+    <!--mouseover script-->
+    <script>
+        function mouseOver(tutu1) {
+        tutu1.style.display='none';
+        }
+  
+        function mouseOut(tutu1) {
+            tutu1.style.display='block';
+        }
+    </script>
+
+    <!--events script-->
+    <script>
+        class events{
+        constructor(eventname) {
+            this.eventname = eventname;
+        }
+        }
+        
+        event = new events("");
+        document.getElementById("E1").innerHTML =  event.eventname + " Built on beautiful coastal land. It gathered people from all cultures and walks of life throughout the ages. This part of the world unveils a human heritage whose walls challenged different historical factors with eight gates; each is known for their historical stories. In addition, it holds more than 10 ancient houses praised for their distinctive designs and the names of their ancient families.";
+        
+        event = new events("");
+        document.getElementById("E2").innerHTML =  event.eventname + "Located in Alzahra’s neighborhood with easy commute, and well known for outdoor market and restaurants and many seating places. Though, what makes it iconic is its many diverse shops specialized in Abaya design and retail. However, it is not limited to Abayas as it offers many store options that will satisfy every taste, like home supplies and family stores, as well as gift, makeup and perfume shops.";
+        
+        
+        event = new events("");
+        document.getElementById("E3").innerHTML =  event.eventname + "Visible from all across the city, King Fahd Fountain is a much-loved Jeddah landmark, and a 30-year-old monument in the middle of the Red Sea. At 312 meters high, its waters decorate the sunset of Jeddah. As the spectacular display of the fountain continues, you can walk around and try different kinds of food along the various stalls in Alhamra Cornish.";
+                
+        event = new events("");
+        document.getElementById("E4").innerHTML =  event.eventname + "The sprawling tunnels and vast tanks that make up the aquarium house over 200 species and around 85 percent of them are native to Jeddah’s undisturbed coral reefs. It makes this colorful window onto the Red Sea the next best way to experience the region’s vibrant underwater ecosystem without needing to squeeze into scuba gear.";                
+        
+        event = new events("");
+        document.getElementById("E5").innerHTML =  event.eventname + "A superbly curated representation of the city’s 2,500-year history. Located in the Al Faisaliyah district, the museum is housed in a multiroom complex that re-creates the traditional Hijazi architecture of the old city, with bay windows overlaid with intricate wooden lattice work and ornate coral masonry.";                
+    
+        event = new events("");
+        document.getElementById("E6").innerHTML =  event.eventname + "This beautiful site stands tall at the start of the road leading to the holiest city for Muslims, Makkah. Baab Makkah has witnessed hundreds of millions of pilgrims make their journey to the home town of the Prophet of Islam (PBUH).";                
+    
+    </script>
+
+     <!-- Initialize Swiper -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+     <script>
+         var swiper = new Swiper(".mySwiper", {
+             slidesPerView: 3,
+             spaceBetween: 30,
+             slidesPerGroup: 3,
+             loop: true,
+             loopFillGroupWithBlank: true,
+             pagination: {
+                 el: ".swiper-pagination",
+                 clickable: true,
+             },
+             navigation: {
+                 nextEl: ".swiper-button-next",
+                 prevEl: ".swiper-button-prev",
+             },
+         });
+     </script>
+
+    <footer>
+        <div class="content">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic"> About our website</div>
+                    <label>
+                        To discovre more about Saudi Arabia and its activities ,cities, regions, pleces and more entertainment options
+                    </label>
+                </div>
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>8002444010</a>
+                    </div>
+                    <div class="email">
+                        <a href="explore.saudi11@gmail.com"><i class="fas fa-envelope"></i>explore.saudi11@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="middle box">
+                <div class="topic">Quick links</div>
+                <div><a href="index.html">Home page</a></div>
+                <div><a href="contact.html">contact us</a></div>
+                <div><a href="about-us.html">about us</a></div>
+
+            </div>
+            <div class="right box">
+                <div class="topic">Find us</div>
+                <form action="#">
+                    <p>our social media</p>
+                    <div class="media-icons">
+                        <a href="https://www.facebook.com/AboutJeddah//"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/discoverjeddah/?hl=en"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/JeddahAmanah"><i class="fab fa-twitter"></i></a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bottom">
+            <p> Copyright © 2023 <a href="https://www.sta.gov.sa/en/home">Saudi Tourism Authority</a> All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
